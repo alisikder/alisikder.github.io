@@ -103,7 +103,7 @@ import { PROFILE_DATA, SOCIAL_LINKS } from '../../../../core/data/profile.data';
             <div class="pt-6 border-t border-border">
               <a
                 [href]="profile.cvUrl"
-                download="Mohammad-Ali-Sikder-Ramim-CV.pdf"
+                download="Mohammad_Ali_Sikder_Ramim_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-mono font-medium bg-surface-hover hover:bg-surface text-text-main border border-border hover:border-accent transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"

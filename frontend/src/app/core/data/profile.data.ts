@@ -11,7 +11,7 @@ export const PROFILE_DATA: ProfileData = {
   email: 'mohammadalisikder-65-2019317881@zoo.du.ac.bd',
   github: 'https://github.com/ali8012026masr',
   linkedin: 'https://linkedin.com/in/ali8012026masr',
-  cvUrl: 'documents/ali-cv.pdf',
+  cvUrl: 'documents/Mohammad_Ali_Sikder_Ramim_CV.pdf',
   hasApprovedCv: true,
   bioParagraphs: [
     'I build type-safe, production-ready full-stack applications using modern Java, Spring Boot, Angular, TypeScript, and SQL. My architecture emphasizes decoupled layers, strict REST contracts, and defensible engineering choices.',

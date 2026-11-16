@@ -63,7 +63,7 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
 
               <a
                 [href]="profile.cvUrl"
-                download="Mohammad-Ali-Sikder-Ramim-CV.pdf"
+                download="Mohammad_Ali_Sikder_Ramim_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 px-5 py-3.5 rounded-lg font-mono text-sm font-medium bg-surface hover:bg-surface-hover text-text-main border border-border hover:border-accent/40 transition-all duration-200 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"

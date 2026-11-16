@@ -78,11 +78,11 @@ test.describe('Mohammad Ali Sikder Ramim Developer Portfolio', () => {
   test('should verify CV download links are present', async ({ page }) => {
     await page.goto('/');
 
-    const cvLinks = page.locator('a[download="Mohammad-Ali-Sikder-Ramim-CV.pdf"]');
+    const cvLinks = page.locator('a[download*="CV.pdf"]');
     const count = await cvLinks.count();
     expect(count).toBeGreaterThanOrEqual(1);
 
     const firstHref = await cvLinks.first().getAttribute('href');
-    expect(firstHref).toMatch(/(ali|ramim)-cv\.pdf/);
+    expect(firstHref).toMatch(/.*CV\.pdf|.*cv\.pdf/);
   });
 });

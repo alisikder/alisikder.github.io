@@ -77,7 +77,7 @@ import { PROFILE_DATA } from '../../../core/data/profile.data';
           <!-- CV Download Button (Desktop) -->
           <a
             [href]="profile.cvUrl"
-            download="Mohammad-Ali-Sikder-Ramim-CV.pdf"
+            download="Mohammad_Ali_Sikder_Ramim_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md text-xs font-mono font-medium bg-surface text-text-main border border-border hover:border-accent hover:text-accent transition-all duration-200 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
@@ -160,7 +160,7 @@ import { PROFILE_DATA } from '../../../core/data/profile.data';
           <div class="pt-3 border-t border-border flex items-center justify-between">
             <a
               [href]="profile.cvUrl"
-              download="Mohammad-Ali-Sikder-Ramim-CV.pdf"
+              download="Mohammad_Ali_Sikder_Ramim_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 px-4 py-2 rounded-md text-xs font-mono font-medium bg-surface text-text-main border border-border hover:border-accent hover:text-accent transition-colors"
