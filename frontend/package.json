@@ -6,8 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "deploy": "ng build --base-href / && npx ngh --dir=dist/frontend/browser",
-    "deploy:myportfolio": "ng build --base-href /MyPortfolio/ && npx ngh --dir=dist/frontend/browser --repo=https://github.com/ali8012026masr/MyPortfolio.git",
-    "deploy:user-site": "ng build --base-href / && npx ngh --dir=dist/frontend/browser --repo=https://github.com/ali8012026masr/ali8012026masr.github.io.git",
+    "deploy:myportfolio": "ng build --base-href /MyPortfolio/ && npx ngh --dir=dist/frontend/browser --repo=https://github.com/alisikder/MyPortfolio.git",
+    "deploy:user-site": "ng build --base-href / && npx ngh --dir=dist/frontend/browser --repo=https://github.com/alisikder/alisikder.github.io.git",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
