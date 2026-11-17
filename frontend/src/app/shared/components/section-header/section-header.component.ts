@@ -6,21 +6,20 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="mb-12 md:mb-16">
-      <div class="flex items-center gap-3 mb-3">
-        <span class="text-xs font-mono font-semibold tracking-widest uppercase text-accent">
-          {{ number() }}
-        </span>
-        <span class="w-10 h-px bg-accent/40"></span>
-        <span class="text-xs font-mono tracking-wider uppercase text-text-muted">
-          {{ tag() }}
-        </span>
+    <div class="space-y-2 mb-12 md:mb-16">
+      <div class="flex items-center gap-2 font-mono text-xs font-bold tracking-widest uppercase text-gradient-em-cyan">
+        <span class="text-[#00F5A0]">▶</span>
+        <span>{{ tag() }}</span>
+        @if (number()) {
+          <span class="text-text-dim text-[11px] font-normal tracking-normal ml-1">[{{ number() }}]</span>
+        }
       </div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-text-main tracking-tight leading-tight">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-display tracking-wide text-text-main uppercase">
         {{ title() }}
       </h2>
+      <div class="w-12 h-1 gradient-em-cyan rounded-full mt-2"></div>
       @if (description()) {
-        <p class="mt-4 text-base sm:text-lg text-text-muted max-w-2xl font-body leading-relaxed">
+        <p class="text-text-muted max-w-2xl text-sm sm:text-base pt-2 font-sans leading-relaxed">
           {{ description() }}
         </p>
       }
@@ -28,8 +27,8 @@ import { CommonModule } from '@angular/common';
   `
 })
 export class SectionHeaderComponent {
-  readonly number = input.required<string>(); // e.g. "01"
-  readonly tag = input.required<string>();    // e.g. "SELECTED PROJECTS"
-  readonly title = input.required<string>();  // e.g. "Featured Engineering Work"
+  readonly number = input<string>();         // e.g. "01"
+  readonly tag = input.required<string>();    // e.g. "PROJECTS"
+  readonly title = input.required<string>();  // e.g. "Featured Work"
   readonly description = input<string>();     // Subtitle
 }

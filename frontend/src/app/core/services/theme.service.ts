@@ -31,15 +31,21 @@ export class ThemeService {
       });
     }
 
-    // Effect to apply data-theme attribute on document root
+    // Effect to apply data-theme attribute and class on document root
     effect(() => {
       const active = this.effectiveTheme();
       const pref = this.preference();
       if (typeof document !== 'undefined') {
         if (pref === 'system') {
-          document.documentElement.setAttribute('data-theme', active);
+          document.documentElement.setAttribute('data-theme', 'system');
         } else {
           document.documentElement.setAttribute('data-theme', pref);
+        }
+
+        if (active === 'light') {
+          document.documentElement.classList.add('theme-light');
+        } else {
+          document.documentElement.classList.remove('theme-light');
         }
       }
     });

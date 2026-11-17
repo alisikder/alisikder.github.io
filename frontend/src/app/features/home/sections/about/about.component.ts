@@ -8,60 +8,76 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
   standalone: true,
   imports: [CommonModule, SectionHeaderComponent],
   template: `
-    <section id="about" class="py-16 sm:py-24 border-t border-border/60" aria-labelledby="about-header">
+    <section id="about" class="py-20 border-t border-white/10" aria-labelledby="about-header">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <app-section-header
           number="01"
-          tag="About Me"
-          title="Engineering Discipline & Background"
-          description="How scientific rigor and intensive enterprise training combine into a disciplined, architecture-first approach to software development."
+          tag="ABOUT ME"
+          title="ENGINEERING DISCIPLINE &amp; BACKGROUND"
+          description="How scientific rigor and intensive enterprise training translate into a disciplined, architecture-first approach to software engineering."
         />
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          <!-- Left Column: Biography Narrative (7 cols) -->
-          <div class="lg:col-span-7 space-y-6 text-base sm:text-lg text-text-muted font-body leading-relaxed">
-            @for (paragraph of profile.bioParagraphs; track paragraph) {
-              <p>
-                {{ paragraph }}
-              </p>
-            }
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Left Column (6 cols) -->
+          <div class="lg:col-span-6 space-y-6">
+            <div class="bg-base-850 rounded-2xl p-6 sm:p-7 border border-white/10 space-y-4">
+              @for (paragraph of profile.bioParagraphs; track paragraph) {
+                <p class="text-slate-300 leading-relaxed text-sm sm:text-base font-sans">
+                  {{ paragraph }}
+                </p>
+              }
+            </div>
 
-            <div class="pt-6 border-t border-border/80 flex flex-wrap gap-6 text-xs font-mono text-text-main">
-              <div>
-                <span class="text-text-dim block mb-1">Academic Foundation</span>
-                <span class="font-semibold text-accent">BS (Honours)</span><br>
-                <span>University of Dhaka</span>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
+              <div class="p-4 rounded-xl bg-base-850 border border-white/10">
+                <span class="text-text-dim block mb-1">Academic Degree</span>
+                <p class="font-semibold text-text-main">BS (Honours)</p>
+                <p class="text-[#00F5A0] text-[11px]">University of Dhaka</p>
               </div>
-              <div class="w-px h-10 bg-border hidden sm:block"></div>
-              <div>
-                <span class="text-text-dim block mb-1">Professional Training</span>
-                <span class="font-semibold text-accent">Full-Stack Enterprise</span><br>
-                <span>IsDB-BISEW Scholarship</span>
+
+              <div class="p-4 rounded-xl bg-base-850 border border-white/10">
+                <span class="text-text-dim block mb-1">Enterprise Training</span>
+                <p class="font-semibold text-text-main">Full-Stack Enterprise</p>
+                <p class="text-[#00D9F5] text-[11px]">IsDB-BISEW Scholar</p>
               </div>
-              <div class="w-px h-10 bg-border hidden sm:block"></div>
-              <div>
-                <span class="text-text-dim block mb-1">Engineering Base</span>
-                <span class="font-semibold text-accent">Dhaka, Bangladesh</span><br>
-                <span>UTC+6 Timezone</span>
+
+              <div class="p-4 rounded-xl bg-base-850 border border-white/10">
+                <span class="text-text-dim block mb-1">Location &amp; Hub</span>
+                <p class="font-semibold text-text-main">Dhaka, Bangladesh</p>
+                <p class="text-text-muted text-[11px]">UTC+6 Timezone</p>
               </div>
             </div>
           </div>
 
-          <!-- Right Column: Engineering Principles (5 cols) -->
-          <div class="lg:col-span-5 space-y-4">
-            <h3 class="text-xs font-mono font-semibold uppercase tracking-wider text-text-dim mb-4">
+          <!-- Right Column: Core Principles (6 cols) -->
+          <div class="lg:col-span-6 space-y-3.5">
+            <p class="font-mono text-xs uppercase text-text-muted tracking-wider mb-2">
               Core Engineering Principles
-            </h3>
+            </p>
 
-            @for (principle of profile.principles; track principle.title) {
-              <div class="p-5 rounded-xl bg-surface border border-border hover:border-accent/40 transition-colors">
-                <h4 class="text-base font-display font-bold text-text-main flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-accent"></span>
-                  {{ principle.title }}
-                </h4>
-                <p class="mt-2 text-xs sm:text-sm text-text-muted font-body leading-relaxed">
-                  {{ principle.desc }}
-                </p>
+            @for (principle of profile.principles; track principle.title; let i = $index) {
+              <div class="p-4 rounded-xl bg-base-850 border border-white/10 hover:border-[#00F5A0]/40 transition-all">
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-base-800 flex items-center justify-center font-mono text-xs font-bold mt-0.5 border"
+                    [ngClass]="{
+                      'text-[#00F5A0] border-[#00F5A0]/30': i === 0,
+                      'text-cyan-400 border-cyan-400/30': i === 1,
+                      'text-purple-400 border-purple-400/30': i === 2,
+                      'text-[#00D9F5] border-[#00D9F5]/30': i === 3
+                    }"
+                  >
+                    0{{ i + 1 }}
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-text-main">
+                      {{ principle.title }}
+                    </h3>
+                    <p class="text-xs text-text-muted mt-1 leading-relaxed font-sans">
+                      {{ principle.desc }}
+                    </p>
+                  </div>
+                </div>
               </div>
             }
           </div>

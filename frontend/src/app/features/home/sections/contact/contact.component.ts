@@ -1,120 +1,160 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SectionHeaderComponent } from '../../../../shared/components/section-header/section-header.component';
-import { PROFILE_DATA, SOCIAL_LINKS } from '../../../../core/data/profile.data';
+import { PROFILE_DATA } from '../../../../core/data/profile.data';
 
 @Component({
   selector: 'app-contact-section',
   standalone: true,
   imports: [CommonModule, SectionHeaderComponent],
   template: `
-    <section id="contact" class="py-16 sm:py-24 border-t border-border/60" aria-labelledby="contact-header">
+    <section id="contact" class="py-20 border-t border-white/10" aria-labelledby="contact-header">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <app-section-header
           number="05"
-          tag="Direct Connect"
-          title="Start a Conversation"
+          tag="GET IN TOUCH"
+          title="SEND A MESSAGE"
           description="Whether you have an open Junior Full-Stack / Java / Angular role, a technical inquiry, or want to explore my code."
         />
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          <!-- Left Column: Primary Contact Card (7 cols) -->
-          <div class="lg:col-span-7 rounded-2xl bg-surface border border-border p-6 sm:p-10 flex flex-col justify-between shadow-xl">
-            <div>
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-xs font-mono text-emerald-600 dark:text-emerald-400 mb-6">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                Currently actively considering junior full-stack &amp; developer opportunities
-              </div>
-
-              <h3 class="text-2xl sm:text-3xl font-display font-bold text-text-main mb-4">
-                Let's discuss how my Java, Spring Boot, and Angular skills can contribute to your team.
-              </h3>
-              <p class="text-sm sm:text-base text-text-muted font-body leading-relaxed mb-8">
-                I am based in Dhaka, Bangladesh and open to on-site, hybrid, and remote engineering positions worldwide.
-              </p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Left side: Contact Prompt Card (7 cols) -->
+          <div class="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-base-850 border border-white/10 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00F5A0]/15 text-[#00F5A0] border border-[#00F5A0]/30 text-xs font-mono font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#00F5A0] animate-pulse"></span>
+              Currently considering Junior Full-Stack opportunities
             </div>
 
-            <!-- Email Action Box -->
-            <div class="p-4 sm:p-6 rounded-xl bg-canvas border border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div class="space-y-1 text-center sm:text-left">
-                <span class="text-xs font-mono uppercase tracking-wider text-text-dim">
-                  Direct Email Address
-                </span>
-                <p class="font-mono text-sm sm:text-base font-semibold text-text-main">
-                  {{ profile.email }}
-                </p>
-              </div>
+            <h3 class="text-3xl font-extrabold text-text-main leading-tight font-display tracking-wide uppercase">
+              LET'S BUILD SOMETHING TOGETHER.
+            </h3>
 
-              <div class="flex items-center gap-2 w-full sm:w-auto">
-                <a
-                  [href]="'mailto:' + profile.email"
-                  class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs font-mono font-semibold bg-accent text-white hover:bg-accent-hover transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
-                >
-                  <span>Send Email</span>
-                  <span>↗</span>
-                </a>
+            <p class="text-sm text-slate-300 leading-relaxed font-sans">
+              I am based in Dhaka, Bangladesh and open to on-site, hybrid, and remote engineering positions worldwide.
+            </p>
 
-                <button
-                  type="button"
-                  (click)="copyEmail()"
-                  class="inline-flex items-center justify-center px-3.5 py-2.5 rounded-lg text-xs font-mono font-medium bg-surface hover:bg-surface-hover text-text-main border border-border transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
-                  [attr.aria-label]="emailCopied() ? 'Email copied' : 'Copy email to clipboard'"
-                >
-                  @if (emailCopied()) {
-                    <span class="text-emerald-500">✓ Copied</span>
-                  } @else {
-                    <span>Copy</span>
-                  }
-                </button>
-              </div>
+            <!-- Quick Email Copy Widget -->
+            <div class="p-3.5 rounded-xl bg-base-900 border border-white/10 flex items-center justify-between gap-2">
+              <span class="font-mono text-xs sm:text-sm text-[#00F5A0] truncate font-semibold">
+                {{ profile.email }}
+              </span>
+              <button
+                type="button"
+                (click)="copyEmail()"
+                class="px-3 py-1.5 rounded-lg bg-base-800 hover:bg-base-750 text-xs font-mono text-slate-300 hover:text-white border border-white/10 transition-colors flex items-center gap-1.5 flex-shrink-0 focus:outline-hidden focus-visible:ring-1 focus-visible:ring-accent"
+                [attr.aria-label]="emailCopied() ? 'Email copied' : 'Copy email to clipboard'"
+              >
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </svg>
+                <span>{{ emailCopied() ? 'Copied!' : 'Copy' }}</span>
+              </button>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a
+                [href]="'mailto:' + profile.email"
+                class="px-6 py-3 rounded-full gradient-em-cyan text-base-950 font-mono font-bold text-xs tracking-wider uppercase transition-all btn-gradient-glow hover:scale-105 flex items-center gap-2 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                <svg class="w-4 h-4 text-base-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </svg>
+                <span>MAIL ME</span>
+              </a>
+
+              <a
+                [href]="profile.linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-6 py-3 rounded-full bg-base-800 hover:bg-base-750 text-text-main font-mono font-bold text-xs tracking-wider uppercase border border-white/10 hover:border-[#00D9F5] transition-all flex items-center gap-2 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                <svg class="w-4 h-4 text-[#00F5A0] fill-current" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>LINKEDIN</span>
+              </a>
             </div>
           </div>
 
-          <!-- Right Column: Verification & Profiles (5 cols) -->
-          <div class="lg:col-span-5 rounded-2xl bg-surface border border-border p-6 sm:p-8 flex flex-col justify-between shadow-xl space-y-6">
-            <div>
-              <h4 class="text-sm font-mono font-semibold uppercase tracking-wider text-text-main mb-3">
-                Verified Channels
-              </h4>
-              <p class="text-xs text-text-muted font-body leading-relaxed mb-6">
-                Inspect public repositories, test suites, and project commits directly on GitHub.
-              </p>
-
-              <div class="space-y-3">
-                @for (link of socialLinks; track link.label) {
-                  <a
-                    [href]="link.url"
-                    [target]="link.isExternal ? '_blank' : '_self'"
-                    [rel]="link.isExternal ? 'noopener noreferrer' : ''"
-                    class="p-3.5 rounded-xl bg-canvas border border-border hover:border-accent/50 flex items-center justify-between text-xs sm:text-sm font-mono text-text-main hover:text-accent transition-colors group"
-                  >
-                    <span class="flex items-center gap-2.5 font-medium">
-                      {{ link.label }}
-                    </span>
-                    <span class="text-text-dim group-hover:text-accent transition-colors">
-                      {{ link.isExternal ? '↗' : '→' }}
-                    </span>
-                  </a>
-                }
+          <!-- Right side: Contact Channels List (5 cols) -->
+          <div class="lg:col-span-5 space-y-4">
+            <!-- Email Channel -->
+            <div class="p-4 rounded-xl bg-base-850 border border-white/10 flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-base-800 flex items-center justify-center text-[#00F5A0]">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="min-w-0">
+                <span class="text-[11px] font-mono text-text-dim uppercase tracking-wider block">EMAIL</span>
+                <a
+                  [href]="'mailto:' + profile.email"
+                  class="text-xs sm:text-sm font-semibold text-text-main hover:text-[#00F5A0] transition-colors truncate block"
+                >
+                  {{ profile.email }}
+                </a>
               </div>
             </div>
 
-            <!-- CV Download Banner -->
-            <div class="pt-6 border-t border-border">
-              <a
-                [href]="profile.cvUrl"
-                download="Mohammad_Ali_Sikder_Ramim_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-mono font-medium bg-surface-hover hover:bg-surface text-text-main border border-border hover:border-accent transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
-              >
-                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                  <polyline points="7 10 12 15 17 10"/>
-                  <line x1="12" y1="15" x2="12" y2="3"/>
+            <!-- LinkedIn Channel -->
+            <a
+              [href]="profile.linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="p-4 rounded-xl bg-base-850 border border-white/10 hover:border-[#00D9F5]/40 transition-all flex items-center justify-between group"
+            >
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-base-800 flex items-center justify-center text-blue-400">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-[11px] font-mono text-text-dim uppercase tracking-wider block">LINKEDIN</span>
+                  <span class="text-sm font-semibold text-text-main group-hover:text-[#00D9F5] transition-colors">
+                    Mohammad Ali Sikder
+                  </span>
+                </div>
+              </div>
+              <span class="text-text-dim group-hover:text-[#00D9F5] transition-colors">↗</span>
+            </a>
+
+            <!-- GitHub Channel -->
+            <a
+              [href]="profile.github"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="p-4 rounded-xl bg-base-850 border border-white/10 hover:border-[#00F5A0]/40 transition-all flex items-center justify-between group"
+            >
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-base-800 flex items-center justify-center text-text-main">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-[11px] font-mono text-text-dim uppercase tracking-wider block">GITHUB</span>
+                  <span class="text-sm font-semibold text-text-main group-hover:text-[#00F5A0] transition-colors">
+                    Inspect Repositories
+                  </span>
+                </div>
+              </div>
+              <span class="text-text-dim group-hover:text-[#00F5A0] transition-colors">↗</span>
+            </a>
+
+            <!-- Location Channel -->
+            <div class="p-4 rounded-xl bg-base-850 border border-white/10 flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-base-800 flex items-center justify-center text-[#00D9F5]">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                  <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                 </svg>
-                Download Curriculum Vitae (PDF)
-              </a>
+              </div>
+              <div>
+                <span class="text-[11px] font-mono text-text-dim uppercase tracking-wider block">LOCATION</span>
+                <span class="text-sm font-semibold text-text-main">Dhaka, Bangladesh (Remote • On-Site)</span>
+              </div>
             </div>
           </div>
         </div>
@@ -124,7 +164,6 @@ import { PROFILE_DATA, SOCIAL_LINKS } from '../../../../core/data/profile.data';
 })
 export class ContactSectionComponent {
   readonly profile = PROFILE_DATA;
-  readonly socialLinks = SOCIAL_LINKS;
   readonly emailCopied = signal<boolean>(false);
 
   copyEmail(): void {

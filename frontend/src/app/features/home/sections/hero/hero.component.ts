@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TerminalSnippetComponent } from '../../../../shared/components/terminal-snippet/terminal-snippet.component';
 import { PROFILE_DATA } from '../../../../core/data/profile.data';
@@ -8,56 +8,51 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
   standalone: true,
   imports: [CommonModule, TerminalSnippetComponent],
   template: `
-    <section class="relative pt-12 sm:pt-20 lg:pt-28 pb-16 sm:pb-24 overflow-hidden" aria-labelledby="hero-title">
-      <!-- Subtle ambient gradient background glow -->
-      <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-96 h-96 sm:w-[600px] sm:h-[600px] bg-accent/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
-
+    <section class="pt-8 sm:pt-16 pb-16 sm:pb-24 relative overflow-hidden" id="hero" aria-labelledby="hero-title">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          <!-- Left Column: Copy & Actions (7 cols) -->
-          <div class="lg:col-span-7 space-y-6 sm:space-y-8">
-            <!-- Availability Beacon -->
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-border text-xs font-mono">
-              <span class="relative flex h-2 w-2">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span class="text-text-muted">{{ profile.availability }}</span>
+          <!-- Left Column (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Badges Row -->
+            <div class="flex flex-wrap items-center gap-3">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-base-850 border border-white/10 text-xs font-mono text-[#00F5A0] shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#00F5A0] animate-pulse"></span>
+                Assalamu Alaikum
+              </div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-base-850 border border-white/10 text-xs font-mono text-text-muted">
+                {{ profile.availability }}
+              </div>
             </div>
 
-            <!-- Main Heading -->
-            <div>
-              <p class="text-xs sm:text-sm font-mono uppercase tracking-widest text-accent mb-2">
-                Full-Stack Developer
-              </p>
+            <!-- Headline & Tagline -->
+            <div class="space-y-2">
               <h1
                 id="hero-title"
-                class="text-4xl sm:text-6xl lg:text-7xl font-display font-bold text-text-main tracking-tight leading-[1.08]"
+                class="text-5xl sm:text-7xl lg:text-8xl font-display tracking-tight text-text-main leading-none uppercase"
               >
-                Building resilient systems with
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-400 to-green-600">
-                  Java, Spring Boot
-                </span>
-                &amp; Angular.
+                I AM MOHAMMAD ALI SIKDER RAMIM
               </h1>
+              <p class="text-base sm:text-xl font-mono text-gradient-em-cyan font-bold tracking-tight uppercase">
+                BUILDING RESILIENT SYSTEMS WITH JAVA, SPRING BOOT &amp; ANGULAR
+              </p>
             </div>
 
-            <!-- Subtitle -->
-            <p class="text-base sm:text-xl text-text-muted max-w-2xl font-body leading-relaxed">
-              Hi, I'm <strong class="text-text-main font-semibold">{{ profile.name }}</strong> ({{ profile.shortName }}).
-              I engineer resilient full-stack applications with modern Spring Boot backends,
-              reactive Angular web interfaces, and native mobile clients.
+            <!-- Narrative Description -->
+            <p class="text-text-muted text-sm sm:text-base leading-relaxed max-w-2xl font-sans">
+              Hi, I'm <strong class="text-text-main font-semibold">Ali</strong> (Mohammad Ali Sikder Ramim).
+              Early-career Full-Stack Engineer bridging an academic science foundation from the University of Dhaka with intensive enterprise scholarship training at IsDB-BISEW.
+              I architect type-safe, multi-client systems with Spring Boot, Angular, PostgreSQL, and context-grounded AI.
             </p>
 
             <!-- Action CTAs -->
-            <div class="flex flex-wrap items-center gap-4 pt-2">
+            <div class="flex flex-wrap items-center gap-3.5 pt-2">
               <a
                 href="#projects"
-                class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg font-mono text-sm font-semibold bg-accent text-white hover:bg-accent-hover shadow-lg shadow-accent/20 transition-all duration-200 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-accent"
+                class="px-6 py-3 rounded-full gradient-em-cyan text-base-950 font-mono font-bold text-xs tracking-wider uppercase transition-all btn-gradient-glow hover:scale-105 flex items-center gap-2 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
               >
-                Explore Projects
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                <span>EXPLORE WORK</span>
+                <svg class="w-3.5 h-3.5 text-base-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
                 </svg>
               </a>
 
@@ -66,59 +61,52 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
                 download="Mohammad_Ali_Sikder_Ramim_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-5 py-3.5 rounded-lg font-mono text-sm font-medium bg-surface hover:bg-surface-hover text-text-main border border-border hover:border-accent/40 transition-all duration-200 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
+                class="px-6 py-3 rounded-full bg-base-800 hover:bg-base-750 text-text-main font-mono font-bold text-xs tracking-wider uppercase border border-white/10 hover:border-[#00D9F5] transition-all flex items-center gap-2 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
               >
-                <svg class="w-4 h-4 text-text-muted" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                  <polyline points="7 10 12 15 17 10"/>
-                  <line x1="12" y1="15" x2="12" y2="3"/>
+                <svg class="w-3.5 h-3.5 text-[#00F5A0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                 </svg>
-                Download CV
+                <span>DOWNLOAD CV</span>
               </a>
 
               <a
                 [href]="profile.github"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-4 py-3.5 rounded-lg font-mono text-sm text-text-muted hover:text-text-main transition-colors focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
+                class="px-4 py-3 rounded-full bg-base-800 hover:bg-base-750 text-text-muted hover:text-text-main font-mono text-xs border border-white/10 transition-colors flex items-center gap-2 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
               >
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
-                GitHub
-                <span class="text-xs">↗</span>
+                <span>GitHub ↗</span>
+              </a>
+
+              <a
+                [href]="profile.linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-4 py-3 rounded-full bg-base-800 hover:bg-base-750 text-text-muted hover:text-text-main font-mono text-xs border border-white/10 transition-colors flex items-center gap-2 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
+              >
+                <svg class="w-3.5 h-3.5 fill-current text-[#00F5A0]" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>LinkedIn ↗</span>
               </a>
             </div>
 
-            <!-- Primary Technology Strip -->
-            <div class="pt-4 border-t border-border/80">
-              <span class="text-[11px] font-mono uppercase tracking-wider text-text-dim block mb-2.5">
-                Primary Core Focus
-              </span>
-              <div class="flex flex-wrap items-center gap-2">
-                <span class="px-2.5 py-1 rounded bg-surface border border-border text-xs font-mono font-medium text-emerald-600 dark:text-emerald-400">
-                  Java 25
-                </span>
-                <span class="px-2.5 py-1 rounded bg-surface border border-border text-xs font-mono font-medium text-emerald-600 dark:text-emerald-400">
-                  Spring Boot 4.1
-                </span>
-                <span class="px-2.5 py-1 rounded bg-surface border border-border text-xs font-mono font-medium text-emerald-600 dark:text-emerald-400">
-                  Angular 22
-                </span>
-                <span class="px-2.5 py-1 rounded bg-surface border border-border text-xs font-mono font-medium text-text-muted">
-                  TypeScript 6
-                </span>
-                <span class="px-2.5 py-1 rounded bg-surface border border-border text-xs font-mono font-medium text-text-muted">
-                  PostgreSQL 16
-                </span>
-                <span class="px-2.5 py-1 rounded bg-surface border border-border text-xs font-mono font-medium text-text-muted">
-                  Spring Security 7
-                </span>
-              </div>
+            <!-- Tech Focus Strip -->
+            <div class="pt-4 border-t border-white/10 flex flex-wrap items-center gap-2 text-xs font-mono">
+              <span class="text-text-dim uppercase tracking-wider mr-1">CORE FOCUS:</span>
+              <span class="px-2.5 py-1 rounded-md bg-base-850 text-[#00F5A0] border border-[#00F5A0]/20 font-bold">Java 21</span>
+              <span class="px-2.5 py-1 rounded-md bg-base-850 text-[#00D9F5] border border-[#00D9F5]/20 font-bold">Spring Boot 3.3</span>
+              <span class="px-2.5 py-1 rounded-md bg-base-850 text-cyan-300 border border-cyan-400/20 font-bold">Angular 18</span>
+              <span class="px-2.5 py-1 rounded-md bg-base-850 text-purple-300 border border-purple-400/20 font-bold">TypeScript</span>
+              <span class="px-2.5 py-1 rounded-md bg-base-850 text-blue-300 border border-blue-400/20 font-bold">PostgreSQL</span>
+              <span class="px-2.5 py-1 rounded-md bg-base-850 text-amber-300 border border-amber-400/20 font-bold">Gemini AI</span>
             </div>
           </div>
 
-          <!-- Right Column: Interactive Terminal (5 cols) -->
+          <!-- Right Column: Terminal Snippet (5 cols) -->
           <div class="lg:col-span-5">
             <app-terminal-snippet />
           </div>

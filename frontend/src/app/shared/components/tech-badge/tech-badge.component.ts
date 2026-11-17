@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <span
-      class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-mono font-medium border transition-colors duration-200"
+      class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-mono transition-colors duration-200 border"
       [ngClass]="getStyleClasses()"
     >
       {{ name() }}
@@ -20,8 +20,8 @@ export class TechBadgeComponent {
 
   getStyleClasses(): string {
     if (this.highlight()) {
-      return 'bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 border-emerald-500/40 shadow-xs';
+      return 'bg-base-900 text-[#00F5A0] border-[#00F5A0]/40 font-semibold shadow-xs';
     }
-    return 'bg-surface text-text-muted hover:text-text-main border-border hover:border-accent/40';
+    return 'bg-base-900 text-slate-300 border-white/10 hover:border-white/25';
   }
 }

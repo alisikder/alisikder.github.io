@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+  --font-code: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   --color-canvas: var(--bg-canvas);
   --color-surface: var(--bg-surface);
   --color-surface-hover: var(--bg-surface-hover);
+  --color-surface-elevated: var(--bg-surface-elevated);
   --color-border: var(--border-color);
   --color-border-subtle: var(--border-subtle);
   
@@ -21,88 +25,146 @@
   --color-accent-badge-text: var(--accent-badge-text);
   --color-amber-accent: var(--color-amber);
   --color-amber-bg: var(--color-amber-bg);
+
+  --color-base-950: var(--base-950);
+  --color-base-900: var(--base-900);
+  --color-base-850: var(--base-850);
+  --color-base-800: var(--base-800);
+  --color-base-750: var(--base-750);
+  --color-mint: #00F5A0;
+  --color-cyan-glow: #00D9F5;
+  --color-lime-neon: #D0FD1B;
 }
 
 /* ==========================================================================
-   Design Tokens & CSS Variables
+   Design Tokens & CSS Variables (Obsidian Cyberpunk Default)
    ========================================================================== */
 
 :root {
-  /* Default: Warm Rice Paper Light Theme */
-  --bg-canvas: #FAF9F5;
-  --bg-surface: #F1EFEA;
-  --bg-surface-hover: #E8E5DD;
-  --border-color: #DDD8CD;
-  --border-subtle: #E5E0D5;
-  --text-primary: #1E293B;
-  --text-secondary: #475569;
-  --text-muted: #64748B;
-  --accent-primary: #15803D;
-  --accent-secondary: #16A34A;
-  --accent-badge: #DCFCE7;
-  --accent-badge-text: #166534;
-  --color-amber: #B45309;
-  --color-amber-bg: rgba(180, 83, 9, 0.12);
-  --code-bg: #EAE6DD;
-}
+  /* Default: Obsidian Cyberpunk Dark */
+  --bg-canvas: #0A0B0D;
+  --bg-surface: #111216;
+  --bg-surface-elevated: #16181D;
+  --bg-surface-hover: #1E2127;
+  --border-color: #22252A;
+  --border-subtle: #1E2127;
+  
+  --base-950: #060709;
+  --base-900: #0A0B0D;
+  --base-850: #111216;
+  --base-800: #16181D;
+  --base-750: #1E2127;
 
-/* Automatic System Dark Mode */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg-canvas: #111614;
-    --bg-surface: #17201C;
-    --bg-surface-hover: #1E2B25;
-    --border-color: #26362E;
-    --border-subtle: #1C2621;
-    --text-primary: #F1F5F9;
-    --text-secondary: #94A3B8;
-    --text-muted: #64748B;
-    --accent-primary: #22C55E;
-    --accent-secondary: #4ADE80;
-    --accent-badge: #14532D;
-    --accent-badge-text: #86EFAC;
-    --color-amber: #F59E0B;
-    --color-amber-bg: rgba(245, 158, 11, 0.15);
-    --code-bg: #0D1210;
-  }
+  --text-primary: #FFFFFF;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+
+  --accent-primary: #00F5A0;
+  --accent-secondary: #00D9F5;
+  --accent-badge: rgba(0, 245, 160, 0.15);
+  --accent-badge-text: #00F5A0;
+  --color-amber: #F59E0B;
+  --color-amber-bg: rgba(245, 158, 11, 0.15);
+  --code-bg: #0D1015;
+
+  --grid-line: rgba(255, 255, 255, 0.03);
 }
 
 /* Explicit Light Mode Override */
-[data-theme="light"] {
-  --bg-canvas: #FAF9F5;
-  --bg-surface: #F1EFEA;
-  --bg-surface-hover: #E8E5DD;
-  --border-color: #DDD8CD;
-  --border-subtle: #E5E0D5;
-  --text-primary: #1E293B;
-  --text-secondary: #475569;
+[data-theme="light"],
+.theme-light {
+  --bg-canvas: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F1F5F9;
+  --bg-surface-hover: #E2E8F0;
+  --border-color: #E2E8F0;
+  --border-subtle: #CBD5E1;
+
+  --base-950: #F1F5F9;
+  --base-900: #F8FAFC;
+  --base-850: #FFFFFF;
+  --base-800: #F1F5F9;
+  --base-750: #E2E8F0;
+
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
   --text-muted: #64748B;
-  --accent-primary: #15803D;
-  --accent-secondary: #16A34A;
-  --accent-badge: #DCFCE7;
-  --accent-badge-text: #166534;
-  --color-amber: #B45309;
-  --color-amber-bg: rgba(180, 83, 9, 0.12);
-  --code-bg: #EAE6DD;
+  --text-dim: #94A3B8;
+
+  --accent-primary: #0D9488;
+  --accent-secondary: #0284C7;
+  --accent-badge: rgba(13, 148, 136, 0.15);
+  --accent-badge-text: #0F766E;
+  --color-amber: #D97706;
+  --color-amber-bg: rgba(217, 119, 6, 0.12);
+  --code-bg: #F1F5F9;
+
+  --grid-line: rgba(15, 23, 42, 0.04);
 }
 
 /* Explicit Dark Mode Override */
 [data-theme="dark"] {
-  --bg-canvas: #111614;
-  --bg-surface: #17201C;
-  --bg-surface-hover: #1E2B25;
-  --border-color: #26362E;
-  --border-subtle: #1C2621;
-  --text-primary: #F1F5F9;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
-  --accent-primary: #22C55E;
-  --accent-secondary: #4ADE80;
-  --accent-badge: #14532D;
-  --accent-badge-text: #86EFAC;
+  --bg-canvas: #0A0B0D;
+  --bg-surface: #111216;
+  --bg-surface-elevated: #16181D;
+  --bg-surface-hover: #1E2127;
+  --border-color: #22252A;
+  --border-subtle: #1E2127;
+
+  --base-950: #060709;
+  --base-900: #0A0B0D;
+  --base-850: #111216;
+  --base-800: #16181D;
+  --base-750: #1E2127;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+
+  --accent-primary: #00F5A0;
+  --accent-secondary: #00D9F5;
+  --accent-badge: rgba(0, 245, 160, 0.15);
+  --accent-badge-text: #00F5A0;
   --color-amber: #F59E0B;
   --color-amber-bg: rgba(245, 158, 11, 0.15);
-  --code-bg: #0D1210;
+  --code-bg: #0D1015;
+
+  --grid-line: rgba(255, 255, 255, 0.03);
+}
+
+/* Automatic System Light Fallback if user's OS is Light */
+@media (prefers-color-scheme: light) {
+  :root[data-theme="system"] {
+    --bg-canvas: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --bg-surface-elevated: #F1F5F9;
+    --bg-surface-hover: #E2E8F0;
+    --border-color: #E2E8F0;
+    --border-subtle: #CBD5E1;
+
+    --base-950: #F1F5F9;
+    --base-900: #F8FAFC;
+    --base-850: #FFFFFF;
+    --base-800: #F1F5F9;
+    --base-750: #E2E8F0;
+
+    --text-primary: #0F172A;
+    --text-secondary: #334155;
+    --text-muted: #64748B;
+    --text-dim: #94A3B8;
+
+    --accent-primary: #0D9488;
+    --accent-secondary: #0284C7;
+    --accent-badge: rgba(13, 148, 136, 0.15);
+    --accent-badge-text: #0F766E;
+    --color-amber: #D97706;
+    --color-amber-bg: rgba(217, 119, 6, 0.12);
+    --code-bg: #F1F5F9;
+
+    --grid-line: rgba(15, 23, 42, 0.04);
+  }
 }
 
 /* ==========================================================================
@@ -125,12 +187,16 @@ body {
   overflow-x: hidden;
   background-color: var(--bg-canvas);
   color: var(--text-primary);
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
 }
 
 /* Selection highlight */
 ::selection {
-  background-color: var(--accent-primary);
-  color: #FFFFFF;
+  background-color: #00F5A0;
+  color: #060709;
 }
 
 /* Accessible focus visible outlines */
@@ -149,4 +215,43 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ==========================================================================
+   Stitch Futuristic Cyberpunk Utilities
+   ========================================================================== */
+
+.gradient-em-cyan {
+  background: linear-gradient(135deg, #00F5A0 0%, #00D9F5 100%);
+}
+
+.text-gradient-em-cyan {
+  background: linear-gradient(135deg, #00F5A0 0%, #00D9F5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-gradient-glow {
+  box-shadow: 0 0 20px -5px rgba(0, 245, 160, 0.4);
+}
+
+.btn-gradient-glow:hover {
+  box-shadow: 0 0 25px 0px rgba(0, 245, 160, 0.6);
+}
+
+.neon-border-glow {
+  box-shadow: 0 0 25px -5px rgba(0, 217, 245, 0.25);
+}
+
+.neon-lime-glow {
+  box-shadow: 0 0 20px -4px rgba(208, 253, 27, 0.35);
+}
+
+.skill-tile {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -10px rgba(0, 245, 160, 0.25);
 }
