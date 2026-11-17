@@ -491,11 +491,13 @@ body {
   border-color: #15803D !important;
 }
 
-/* Dark code terminal preserved for readability in light mode */
+/* Solid dark IDE code terminal preserved with maximum contrast in both light & dark modes */
+#code-box,
 .theme-light #code-box,
 [data-theme="light"] #code-box {
-  background-color: #0B0F19 !important;
-  border-color: #DDD8CD !important;
+  background-color: #0D1117 !important;
+  border-color: #30363D !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.2) !important;
 }
 
 .theme-light #code-box h1,

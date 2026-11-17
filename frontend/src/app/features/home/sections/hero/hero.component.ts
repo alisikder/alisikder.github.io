@@ -10,7 +10,7 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
   template: `
     <section class="pt-12 pb-16 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-28" id="hero" aria-labelledby="hero-title">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           <div class="lg:col-span-7 space-y-6">
             <!-- Greeting / Kicker Tag -->
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-base-800 border border-white/10 text-xs font-mono">
@@ -28,7 +28,8 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
                 class="text-5xl sm:text-6xl lg:text-7xl font-display tracking-wide text-text-main leading-none"
               >
                 I AM <br>
-                <span class="text-gradient-em-cyan">MOHAMMAD ALI</span> SIKDER RAMIM
+                <span class="text-gradient-em-cyan">MOHAMMAD ALI</span> SIKDER <br>
+                RAMIM
               </h1>
               <p class="text-xl sm:text-2xl font-bold tracking-tight text-text-main pt-2">
                 BUILDING RESILIENT SYSTEMS WITH <span class="text-gradient-em-cyan underline decoration-[#00D9F5]/60 underline-offset-4 font-extrabold">JAVA, SPRING BOOT</span> &amp; <span class="text-cyan-400">ANGULAR</span>.
@@ -129,7 +130,7 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
           </div>
 
           <!-- Terminal Code Snippet (Right Col) -->
-          <div class="lg:col-span-5 w-full flex justify-center lg:justify-end">
+          <div class="lg:col-span-5 w-full flex justify-center lg:justify-end pt-4 lg:pt-[218px]">
             <app-terminal-snippet />
           </div>
         </div>
