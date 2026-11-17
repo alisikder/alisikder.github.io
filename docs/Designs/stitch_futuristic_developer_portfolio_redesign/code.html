@@ -1,0 +1,998 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Mohammad Ali Sikder Ramim | Enterprise Full-Stack Engineer</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Outfit:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Outfit', 'sans-serif'],
+        display: ['"Bebas Neue"', 'sans-serif'],
+        mono: ['"Space Grotesk"', 'monospace'],
+        code: ['"JetBrains Mono"', 'monospace'],
+      },
+      colors: {
+        base: {
+          950: '#060709',
+          900: '#0A0B0D',
+          850: '#111216',
+          800: '#16181D',
+          750: '#1E2127',
+          700: '#2A2E36',
+          600: '#3A3F4A'
+        },
+        mint: {
+          400: '#00F5A0',
+          500: '#10b981',
+        },
+        teal: {
+          cyan: '#00D9F5',
+          electric: '#06b6d4',
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+  body {
+    background-color: #0A0B0D;
+    color: #E2E8F0;
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  ::selection {
+    background: #00D9F5;
+    color: #0A0B0D;
+  }
+  .gradient-em-cyan {
+    background: linear-gradient(135deg, #00F5A0 0%, #00D9F5 100%);
+  }
+  .gradient-em-cyan-hover:hover {
+    background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+  }
+  .text-gradient-em-cyan {
+    background: linear-gradient(135deg, #00F5A0 0%, #00D9F5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-cyan-teal {
+    background: linear-gradient(135deg, #38bdf8 0%, #00F5A0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .neon-glow-em-cyan {
+    box-shadow: 0 0 35px rgba(0, 245, 160, 0.25), 0 0 20px rgba(0, 217, 245, 0.2);
+  }
+  .neon-border-glow:hover {
+    border-color: #00D9F5 !important;
+    box-shadow: 0 0 25px rgba(0, 217, 245, 0.22);
+  }
+  .btn-gradient-glow {
+    box-shadow: 0 0 25px rgba(0, 245, 160, 0.35), 0 0 10px rgba(0, 217, 245, 0.25);
+  }
+  .btn-gradient-glow:hover {
+    box-shadow: 0 0 35px rgba(0, 245, 160, 0.5), 0 0 15px rgba(0, 217, 245, 0.4);
+  }
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+  /* Light Theme */
+  html.theme-light body {
+    background-color: #F4F5F7;
+    color: #0F172A;
+  }
+  html.theme-light .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  }
+  html.theme-light header {
+    background-color: rgba(244, 245, 247, 0.92) !important;
+    border-color: rgba(226, 232, 240, 0.8) !important;
+  }
+  html.theme-light .bg-base-950,
+  html.theme-light .bg-base-900 {
+    background-color: #FFFFFF !important;
+  }
+  html.theme-light .bg-base-850 {
+    background-color: #FFFFFF !important;
+    border-color: #E2E8F0 !important;
+    box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05);
+  }
+  html.theme-light .bg-base-800 {
+    background-color: #F8FAFC !important;
+    border-color: #E2E8F0 !important;
+  }
+  html.theme-light .bg-base-750 {
+    background-color: #F1F5F9 !important;
+    border-color: #CBD5E1 !important;
+  }
+  html.theme-light .text-white {
+    color: #0F172A !important;
+  }
+  html.theme-light .text-slate-300 {
+    color: #334155 !important;
+  }
+  html.theme-light .text-slate-400 {
+    color: #64748B !important;
+  }
+  html.theme-light .border-white\/5,
+  html.theme-light .border-white\/10,
+  html.theme-light .border-base-700 {
+    border-color: #E2E8F0 !important;
+  }
+  html.theme-light footer {
+    background-color: #0B0E14 !important;
+  }
+  html.theme-light footer .text-white {
+    color: #FFFFFF !important;
+  }
+  html.theme-light #code-box {
+    background-color: #0B0F19 !important;
+  }
+  html.theme-light .skill-tile {
+    background-color: #FFFFFF !important;
+    border-color: #E2E8F0 !important;
+  }
+</style>
+</head>
+<body class="relative min-h-screen bg-base-900 text-slate-200 antialiased selection:bg-cyan-400 selection:text-base-950 bg-grid-pattern">
+<!-- Ambient Background Glows in Emerald and Electric Cyan -->
+<div class="fixed top-[-140px] right-[-100px] w-[550px] h-[550px] rounded-full bg-[#00F5A0]/10 blur-[130px] pointer-events-none -z-10" style="background-color: rgba(13, 148, 136, 0.15);"></div>
+<div class="fixed bottom-[-100px] left-[-120px] w-[500px] h-[500px] rounded-full bg-[#00D9F5]/10 blur-[140px] pointer-events-none -z-10" style="background-color: rgba(20, 184, 166, 0.12);"></div>
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full backdrop-blur-xl bg-base-900/90 border-b border-white/5 transition-colors duration-300">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+<!-- Brand stylized logo badge with emerald-cyan border/glow -->
+<a class="flex items-center gap-3.5 group flex-shrink-0" href="#hero">
+<div class="w-10 h-10 rounded-xl bg-base-800 border border-[#00F5A0]/50 flex items-center justify-center font-display text-xl text-[#00F5A0] tracking-wider shadow-[0_0_15px_rgba(0,245,160,0.25)] group-hover:gradient-em-cyan group-hover:text-base-950 transition-all duration-300" style="border-color: rgba(45, 212, 191, 0.5); color: rgb(45, 212, 191); box-shadow: rgba(20, 184, 166, 0.25) 0px 0px 15px;">
+        MASR
+      </div>
+<div style="border-color: rgba(45, 212, 191, 0.5); color: rgb(45, 212, 191); box-shadow: rgba(20, 184, 166, 0.25) 0px 0px 15px;">
+<span class="text-sm font-bold tracking-tight text-white group-hover:text-[#00D9F5] transition-colors block">Mohammad Ali Sikder</span>
+<span class="block text-[11px] font-mono text-slate-400">Enterprise Full-Stack</span>
+</div>
+</a>
+<!-- Clean Carl Asuliz Upper Navigation -->
+<nav class="hidden lg:flex items-center gap-7 text-xs font-mono tracking-widest uppercase font-semibold">
+<a class="text-slate-400 hover:text-[#00F5A0] transition-colors" href="#hero">Home</a>
+<a class="text-slate-400 hover:text-[#00F5A0] transition-colors" href="#projects">Projects</a>
+<a class="text-slate-400 hover:text-[#00F5A0] transition-colors" href="#skills">Skills</a>
+<a class="text-slate-400 hover:text-[#00F5A0] transition-colors" href="#journey">Education</a>
+<a class="text-slate-400 hover:text-[#00F5A0] transition-colors" href="#about">About</a>
+<a class="text-slate-400 hover:text-[#00F5A0] transition-colors" href="#contact">Message</a>
+</nav>
+<!-- Theme Switcher & Actions -->
+<div class="flex items-center gap-3 sm:gap-3.5">
+<!-- Light / Dark / System Segmented Control -->
+<div aria-label="Theme switcher" class="flex items-center p-1 rounded-xl bg-base-850 border border-white/10 shadow-inner" id="theme-control" role="group">
+<!-- Light Mode Button -->
+<button class="theme-btn px-2.5 py-1 rounded-lg text-xs font-mono text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-theme="light" id="btn-light" title="Light Theme" type="button">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="4" stroke-width="2"></circle>
+<path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+<span class="hidden sm:inline text-[11px]">Light</span>
+</button>
+<!-- Dark Mode Button (Active) -->
+<button class="theme-btn px-2.5 py-1 rounded-lg text-xs font-mono text-base-950 gradient-em-cyan border border-[#00F5A0]/80 shadow-sm transition-all flex items-center gap-1.5 font-bold" data-theme="dark" id="btn-dark" title="Dark Theme" type="button">
+<svg class="w-3.5 h-3.5 text-base-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="hidden sm:inline text-[11px]">Dark</span>
+</button>
+<!-- System Auto Button -->
+<button class="theme-btn px-2.5 py-1 rounded-lg text-xs font-mono text-slate-400 hover:text-white transition-all flex items-center gap-1.5" data-theme="system" id="btn-system" title="System Preference" type="button">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<rect height="14" rx="2" ry="2" stroke-width="2" width="20" x="2" y="3"></rect>
+<line stroke-linecap="round" stroke-width="2" x1="8" x2="16" y1="21" y2="21"></line>
+<line stroke-linecap="round" stroke-width="2" x1="12" x2="12" y1="17" y2="21"></line>
+</svg>
+<span class="hidden sm:inline text-[11px]">Auto</span>
+</button>
+</div>
+<!-- Available Status Pill with Emerald-to-Cyan Pulse -->
+<div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-mono" style="background-color: rgba(13, 148, 136, 0.15); border-color: rgba(45, 212, 191, 0.35); color: rgb(45, 212, 191);"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style="background-color: #2dd4bf;"></span><span class="relative inline-flex rounded-full h-2 w-2" style="background-color: #14b8a6;"></span></span><span class="font-semibold tracking-wide text-gradient-em-cyan">Available for Hire</span></div>
+<!-- CV Download Button -->
+<a class="px-3.5 sm:px-4 py-2 rounded-xl bg-base-800 hover:bg-base-750 text-white text-xs font-mono font-semibold border border-white/10 hover:border-[#00D9F5]/50 transition-all flex items-center gap-1.5 shadow-sm" href="#contact">
+<svg class="w-3.5 h-3.5 text-[#00F5A0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>CV (PDF)</span>
+</a>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<!-- Hero Section -->
+<section class="pt-16 pb-20 lg:pt-24 lg:pb-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center" id="hero">
+<div class="lg:col-span-7 space-y-6">
+<!-- Greeting / Kicker Tag -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-base-800 border border-white/10 text-xs font-mono"><span class="w-2 h-2 rounded-full" style="background-color: rgb(45, 212, 191); box-shadow: rgba(45, 212, 191, 0.7) 0px 0px 8px;"></span><span class="text-gradient-em-cyan font-bold tracking-wider">FULL-STACK DEVELOPER</span><span class="text-slate-600">•</span><span class="text-slate-400">Dhaka, Bangladesh</span></div>
+<!-- Massive Headline with Emerald-to-Cyan Gradient -->
+<div class="space-y-2">
+<p class="text-slate-400 font-mono text-sm tracking-wider uppercase">" Assalamu Alaikum "</p>
+<h1 class="text-5xl sm:text-6xl lg:text-7xl font-display tracking-wide text-white leading-none">
+          I AM <br>
+<span class="text-gradient-em-cyan">MOHAMMAD ALI</span> SIKDER RAMIM
+        </h1>
+<p class="text-xl sm:text-2xl font-bold tracking-tight text-white pt-2">
+          BUILDING RESILIENT SYSTEMS WITH <span class="text-gradient-em-cyan underline decoration-[#00D9F5]/60 underline-offset-4 font-extrabold">JAVA, SPRING BOOT</span> &amp; <span class="text-cyan-400">ANGULAR</span>.
+        </p>
+</div>
+<!-- Bio / Description -->
+<p class="text-base text-slate-300 font-normal leading-relaxed max-w-xl">
+        Hi, I'm <strong class="text-white font-semibold">Ali</strong>. I build type-safe, production-ready full-stack applications with modern Spring Boot backends, reactive Angular web interfaces, and native mobile clients. Grounded in scientific rigor with intensive enterprise full-stack training.
+      </p>
+<!-- High-Impact CTA Buttons with Emerald-Cyan Gradient -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="px-7 py-3 rounded-full gradient-em-cyan text-base-950 font-mono font-bold text-xs tracking-wider uppercase transition-all duration-300 btn-gradient-glow hover:scale-105 flex items-center gap-2" href="#projects">
+<span>EXPLORE WORK</span>
+<svg class="w-4 h-4 text-base-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+</a>
+<a class="px-7 py-3 rounded-full bg-base-800 hover:bg-base-750 text-white font-mono font-bold text-xs tracking-wider uppercase border border-white/10 hover:border-[#00D9F5] transition-all flex items-center gap-2" href="#contact">
+<svg class="w-4 h-4 text-[#00F5A0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>DOWNLOAD CV</span>
+</a>
+<div class="flex items-center gap-2 pl-2">
+<a class="p-3 rounded-full bg-base-800 hover:bg-base-750 text-slate-300 hover:text-[#00F5A0] border border-white/10 transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank" title="GitHub">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="p-3 rounded-full bg-base-800 hover:bg-base-750 text-slate-300 hover:text-[#00D9F5] border border-white/10 transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="p-3 rounded-full bg-base-800 hover:bg-base-750 text-slate-300 hover:text-[#00F5A0] border border-white/10 transition-colors" href="mailto:mohammadalisikder45-2019317083@zoo.du.ac.bd" title="Email">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+<!-- Quick Tech Badges -->
+<div class="pt-4 border-t border-white/10">
+<p class="text-[11px] uppercase tracking-widest text-slate-400 font-mono mb-3">Primary Core Focus</p>
+<div class="flex flex-wrap gap-2 text-xs font-mono">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-base-800 text-[#00F5A0] border border-[#00F5A0]/30" style="color: rgb(45, 212, 191); border-color: rgba(45, 212, 191, 0.4);">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00F5A0]" style="color: rgb(45, 212, 191); border-color: rgba(45, 212, 191, 0.4);"></span> Java 21
+          </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-base-800 text-[#00D9F5] border border-[#00D9F5]/30">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00D9F5]" style="color: rgb(45, 212, 191); border-color: rgba(45, 212, 191, 0.4);"></span> Spring Boot 3.3
+          </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-base-800 text-cyan-400 border border-cyan-400/30">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400" style="color: rgb(45, 212, 191); border-color: rgba(45, 212, 191, 0.4);"></span> Angular 18
+          </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-base-800 text-cyan-400 border border-cyan-400/30">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400" style="color: rgb(45, 212, 191); border-color: rgba(45, 212, 191, 0.4);"></span> TypeScript 5
+          </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-base-800 text-slate-300 border border-white/10">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-400" style="color: rgb(45, 212, 191); border-color: rgba(45, 212, 191, 0.4);"></span> PostgreSQL 16
+          </span>
+</div>
+</div>
+</div>
+<!-- Right Side: Glowing Sleek IDE Window (AliEngineer.java) with Emerald/Cyan Glow -->
+<div class="lg:col-span-5 relative">
+<div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#00F5A0]/30 via-[#00D9F5]/30 to-[#00F5A0]/10 blur-xl opacity-75" style="background: linear-gradient(135deg, rgba(13, 148, 136, 0.35) 0%, rgba(45, 212, 191, 0.3) 50%, rgba(20, 184, 166, 0.15) 100%);"></div>
+<div class="relative rounded-2xl bg-base-850 border border-white/10 shadow-2xl overflow-hidden backdrop-blur-xl">
+<div class="bg-base-800 px-4 py-3 border-b border-white/10 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+<span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+<span class="w-3 h-3 rounded-full bg-[#00F5A0]/80"></span>
+<span class="ml-2 text-xs font-mono text-slate-300 font-semibold">AliEngineer.java</span>
+</div>
+<span class="text-xs font-mono text-[#00F5A0] font-bold" style="color: rgb(45, 212, 191);">OpenJDK 21</span>
+</div>
+<div class="p-5 font-code text-[12.5px] leading-relaxed text-slate-300 overflow-x-auto bg-[#07090D]" id="code-box">
+<p class="text-slate-500">// Enterprise Full-Stack Specification</p>
+<p><span class="text-purple-400">public record</span> <span class="text-[#00F5A0] font-semibold">FullStackEngineer</span>(</p>
+<p class="pl-4"><span class="text-cyan-400">String</span> <span class="text-slate-200">name</span>, <span class="text-slate-500">// "Mohammad Ali Sikder Ramim"</span></p>
+<p class="pl-4"><span class="text-cyan-400">String</span> <span class="text-slate-200">primarySpecialization</span>, <span class="text-slate-500">// "Java &amp; Spring Boot + Angular"</span></p>
+<p class="pl-4"><span class="text-cyan-400">List&lt;String&gt;</span> <span class="text-slate-200">coreStack</span>, <span class="text-[#00F5A0]">List.of(</span></p>
+<p class="pl-8 text-cyan-300/90">"Java 21", "Spring Boot", "Angular", "TypeScript", "PostgreSQL"</p>
+<p class="pl-4"><span class="text-[#00F5A0]">)</span>,</p>
+<p class="pl-4"><span class="text-cyan-400">String</span> <span class="text-slate-200">flagshipProject</span>, <span class="text-[#00D9F5]">"Horizon (Travel Booking)"</span>,</p>
+<p class="pl-4"><span class="text-purple-400">boolean</span> <span class="text-slate-200">availableForHire</span> <span class="text-purple-400">=&gt; true</span></p>
+<p>) {</p>
+<p class="pl-4"><span class="text-purple-400">@Contract</span>(pure = <span class="text-purple-400">true</span>)</p>
+<p class="pl-4"><span class="text-purple-400">public void</span> <span class="text-cyan-400">buildReliableSoftware</span>() {</p>
+<p class="pl-8 text-slate-400">verifyRequirements();</p>
+<p class="pl-8 text-slate-400">enforceTypeSafety();</p>
+<p class="pl-8 text-[#00F5A0] font-semibold">deliverDefensibleSolutions();</p>
+<p class="pl-4">}</p>
+<p>}</p>
+</div>
+<div class="px-4 py-2.5 bg-base-800/80 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-slate-400">
+<span class="flex items-center gap-1.5 text-[#00D9F5]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00D9F5]"></span> OpenJDK 21 Verified
+          </span>
+<span>Target: Spring Boot 3.3.x</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-20 border-t border-white/10" id="projects">
+<div class="space-y-2 mb-12">
+<div class="flex items-center gap-2 font-mono text-xs font-bold tracking-widest uppercase text-gradient-em-cyan">
+<span class="text-[#00F5A0]">▶</span> <span>PROJECTS</span>
+</div>
+<h2 class="text-4xl sm:text-5xl font-display tracking-wide text-white">FEATURED WORK</h2>
+<div class="w-12 h-1 gradient-em-cyan rounded-full mt-2"></div>
+<p class="text-slate-400 max-w-2xl text-sm pt-2">Real-world full-stack systems verified in source code, automated tests, and live demos.</p>
+</div>
+<!-- Flagship Project Card (Horizon) -->
+<div class="rounded-2xl bg-base-850 border border-[#00D9F5]/40 shadow-2xl p-6 sm:p-8 lg:p-10 mb-10 relative overflow-hidden neon-border-glow transition-all" style="border-color: rgba(45, 212, 191, 0.35); box-shadow: rgba(13, 148, 136, 0.2) 0px 10px 30px -10px;">
+<div class="absolute top-0 left-0 right-0 h-1 gradient-em-cyan shadow-[0_0_12px_#00D9F5]"></div>
+<div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-[#00F5A0]/15 text-[#00F5A0] border border-[#00F5A0]/40 text-xs font-mono font-bold uppercase tracking-wider" style="background-color: rgba(13, 148, 136, 0.2); color: rgb(45, 212, 191); border-color: rgba(45, 212, 191, 0.4);">
+            PRIMARY FLAGSHIP
+          </span>
+<span class="text-xs font-mono text-slate-400">Full-Stack Enterprise Web Application</span>
+</div>
+<span class="inline-flex items-center gap-1.5 text-xs font-mono text-[#00D9F5] bg-base-800 px-3 py-1 rounded-full border border-[#00D9F5]/30" style="color: rgb(45, 212, 191); border-color: rgba(45, 212, 191, 0.3);">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00D9F5]"></span> Implemented &amp; Tested
+        </span>
+</div>
+<div class="space-y-2 mb-6">
+<h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Horizon — All-in-One Travel Booking Platform
+        </h3>
+<p class="text-gradient-em-cyan font-mono text-sm font-semibold">
+          Multi-Role Marketplace with Context-Grounded AI Concierge &amp; Real-Time GIS Tracking
+        </p>
+</div>
+<p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 max-w-4xl">
+        A comprehensive tourism operating system and travel marketplace uniting Tourists, Transport/Hotel Service Providers, Certified Guides, and System Administrators with dynamic GIS tracking, group split-settlements, and an inventory-grounded Gemini AI Concierge.
+      </p>
+<!-- Key Capabilities Metric Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 text-xs sm:text-sm text-slate-300 mb-8">
+<div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-base-900 border border-white/5">
+<span class="text-[#00F5A0] font-bold text-base mt-[-2px]">✓</span>
+<span><strong>4 distinct user personas:</strong> Tourist, Service Provider, Tour Guide, Administrator with isolated dashboards.</span>
+</div>
+<div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-base-900 border border-white/5">
+<span class="text-[#00D9F5] font-bold text-base mt-[-2px]">✓</span>
+<span><strong>Per-User HMAC-SHA token signing:</strong> using BCrypt password hashes for zero-blacklist instant revocation.</span>
+</div>
+<div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-base-900 border border-white/5">
+<span class="text-[#00F5A0] font-bold text-base mt-[-2px]">✓</span>
+<span><strong>Context-grounded Gemini 1.5 Flash:</strong> integration enforcing server-side inventory verification against DB slots.</span>
+</div>
+<div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-base-900 border border-white/5">
+<span class="text-[#00D9F5] font-bold text-base mt-[-2px]">✓</span>
+<span><strong>Interactive Leaflet GIS map:</strong> displaying live GPS beacons from Tour Guide broadcasters.</span>
+</div>
+</div>
+<!-- Tech Stack Badges -->
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-[#00F5A0] border border-[#00F5A0]/30">Java 21</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-[#00D9F5] border border-[#00D9F5]/30">Spring Boot 3.3</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-purple-300 border border-purple-500/30">Spring Security 7</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-cyan-300 border border-cyan-500/30">Angular 17</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-cyan-300 border border-cyan-500/30">TypeScript 5</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-blue-300 border border-blue-500/30">PostgreSQL 16</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-amber-300 border border-amber-500/30">Google Gemini 1.5 Flash</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-emerald-300 border border-emerald-500/30">Leaflet GIS</span>
+</div>
+<!-- Card Footer CTA -->
+<div class="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-white/10">
+<div class="flex items-center gap-3">
+<a class="px-5 py-2.5 rounded-full gradient-em-cyan text-base-950 font-mono font-bold text-xs tracking-wider uppercase transition-all btn-gradient-glow flex items-center gap-1.5" href="#contact">
+<span>VIEW CASE STUDY</span>
+<svg class="w-3.5 h-3.5 text-base-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+</a>
+<a class="px-4 py-2.5 rounded-full bg-base-800 hover:bg-base-750 text-white font-mono text-xs border border-white/10 transition-colors flex items-center gap-2" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+<span>GitHub Repo</span>
+</a>
+</div>
+<div class="text-xs font-mono text-slate-400">
+          Port: <span class="text-[#00F5A0] font-bold">54200 (Angular)</span> | Port: <span class="text-[#00D9F5] font-bold">50500 (Spring Boot)</span>
+</div>
+</div>
+</div>
+<!-- 3 Companion Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Horizon Tourist (Android) -->
+<div class="rounded-2xl bg-base-850 p-6 border border-white/10 hover:border-[#00F5A0]/50 transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-[#00F5A0] bg-base-800 px-2.5 py-1 rounded-full border border-[#00F5A0]/30" style="color: #2dd4bf; border-color: rgba(45, 212, 191, 0.35);">
+              Android Showcase
+            </span>
+<span class="text-[11px] font-mono text-[#00F5A0] bg-[#00F5A0]/10 px-2 py-0.5 rounded border border-[#00F5A0]/20" style="background-color: rgba(13, 148, 136, 0.2); color: rgb(45, 212, 191); border-color: rgba(45, 212, 191, 0.35);">Implemented</span>
+</div>
+<h4 class="text-xl font-bold text-white mb-1 group-hover:text-[#00F5A0] transition-colors">Horizon Tourist (Android)</h4>
+<p class="text-xs font-mono text-slate-400 mb-3">Native Android Companion with Live GPS Telemetry</p>
+<p class="text-xs text-slate-300 leading-relaxed mb-6">
+            Native Android mobile application built with Java and XML Layouts communicating with the Horizon Spring Boot backend to deliver mobile bookings, live GPS tracking, and AI concierge access.
+          </p>
+</div>
+<div>
+<div class="flex flex-wrap gap-1.5 mb-5">
+<span class="text-[10px] font-mono px-2 py-0.5 bg-base-900 text-slate-300 rounded border border-white/10">Java (Android)</span>
+<span class="text-[10px] font-mono px-2 py-0.5 bg-base-900 text-slate-300 rounded border border-white/10">XML Layouts</span>
+<span class="text-[10px] font-mono px-2 py-0.5 bg-base-900 text-slate-300 rounded border border-white/10">Retrofit 2</span>
+<span class="text-[10px] font-mono px-2 py-0.5 bg-base-900 text-[#00D9F5] rounded border border-[#00D9F5]/30">Spring REST</span>
+</div>
+<div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono">
+<a class="text-[#00F5A0] font-bold hover:underline flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank" style="color: rgb(45, 212, 191);">
+<span>VIEW PROJECT</span>
+<span>→</span>
+</a>
+<svg class="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</div>
+</div>
+</div>
+<!-- Horizon Mobile (Flutter) -->
+<div class="rounded-2xl bg-base-850 p-6 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-cyan-400 bg-base-800 px-2.5 py-1 rounded-full border border-cyan-400/30" style="background-color: rgba(13, 148, 136, 0.2); color: rgb(45, 212, 191); border-color: rgba(45, 212, 191, 0.4);">
+              Flutter Showcase
+            </span>
+<span class="text-[11px] font-mono text-cyan-400 bg-cyan-400/10 px-2 py-0.5 rounded border border-cyan-400/20">Prototype</span>
+</div>
+<h4 class="text-xl font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">Horizon Mobile (Flutter)</h4>
+<p class="text-xs font-mono text-slate-400 mb-3">Cross-Platform Mobile Tourist Client</p>
+<p class="text-xs text-slate-300 leading-relaxed mb-6">
+            Cross-platform mobile application built with Flutter 3.x and Dart communicating with the Horizon Spring Boot backend. Features responsive mobile booking flows and state management via Riverpod.
+          </p>
+</div>
+<div>
+<div class="flex flex-wrap gap-1.5 mb-5">
+<span class="text-[10px] font-mono px-2 py-0.5 bg-base-900 text-slate-300 rounded border border-white/10">Flutter 3.x</span>
+<span class="text-[10px] font-mono px-2 py-0.5 bg-base-900 text-slate-300 rounded border border-white/10">Dart</span>
+<span class="text-[10px] font-mono px-2 py-0.5 bg-base-900 text-slate-300 rounded border border-white/10">Riverpod</span>
+</div>
+<div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono">
+<a class="text-cyan-400 font-bold hover:underline flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>VIEW PROJECT</span>
+<span>→</span>
+</a>
+<svg class="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</div>
+</div>
+</div>
+<!-- Bangla Akinator -->
+<div class="rounded-2xl bg-base-850 p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-purple-400 bg-base-800 px-2.5 py-1 rounded-full border border-purple-400/30" style="background-color: rgba(13, 148, 136, 0.2); color: rgb(45, 212, 191); border-color: rgba(45, 212, 191, 0.4);">
+              Algorithmic Showcase
+            </span>
+<span class="text-[11px] font-mono text-purple-400 bg-purple-400/10 px-2 py-0.5 rounded border border-purple-400/20">Prototype</span>
+</div>
+<h4 class="text-xl font-bold text-white mb-1 group-hover:text-purple-400 transition-colors">বাংলা ধাঁধা (Bangla Akinator)</h4>
+<p class="text-xs font-mono text-slate-400 mb-3">Probabilistic 20-Questions Guessing Game</p>
+<p class="text-xs text-slate-300 leading-relaxed mb-6">
+            A probabilistic guessing game for Bangladeshi cultural personalities powered by Shannon Entropy Expected Information Gain and Bayesian log-sum-exp normalization.
+          </p>
+</div>
+<div>
+<div class="flex flex-wrap gap-1.5 mb-5">
+<span class="text-[10px] font-mono px-2 py-0.5 bg-base-900 text-slate-300 rounded border border-white/10">Python 3.11</span>
+<span class="text-[10px] font-mono px-2 py-0.5 bg-base-900 text-slate-300 rounded border border-white/10">FastAPI</span>
+<span class="text-[10px] font-mono px-2 py-0.5 bg-base-900 text-slate-300 rounded border border-white/10">MongoDB</span>
+</div>
+<div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono">
+<a class="text-purple-400 font-bold hover:underline flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>VIEW SOURCE</span>
+<span>→</span>
+</a>
+<svg class="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Stack Matrix -->
+<section class="py-20 border-t border-white/10" id="skills">
+<div class="space-y-2 mb-12">
+<div class="flex items-center gap-2 font-mono text-xs font-bold tracking-widest uppercase text-gradient-em-cyan">
+<span class="text-[#00F5A0]">▶</span> <span>WHAT I WORK WITH</span>
+</div>
+<h2 class="text-4xl sm:text-5xl font-display tracking-wide text-white">SKILLS &amp; TOOLS</h2>
+<div class="w-12 h-1 gradient-em-cyan rounded-full mt-2"></div>
+<p class="text-slate-400 max-w-2xl text-sm pt-2">A transparent breakdown of technologies backed by concrete implementation in repository code.</p>
+</div>
+<!-- Grid of Tech Icons -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 mb-10">
+<!-- Java -->
+<div class="skill-tile rounded-xl bg-base-850 p-4 border border-white/10 hover:border-[#00F5A0]/50 transition-all flex flex-col items-center justify-center text-center group">
+<div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-[#00F5A0] mb-2.5 group-hover:scale-110 transition-transform">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.7 18.5c0 .3 2.1.6 4.3.6s4.3-.3 4.3-.6-2.1-.6-4.3-.6-4.3.3-4.3.6zm-1.8 2.4c0 .4 2.8.8 6.1.8s6.1-.4 6.1-.8-2.8-.8-6.1-.8-6.1.4-6.1.8zm6.1-4.8c-2.8 0-5.1.3-5.1.7s2.3.7 5.1.7 5.1-.3 5.1-.7-2.3-.7-5.1-.7zm1.8-6.9c.7 1.2-.5 2.3-1.6 3.1-1 .7-1.7 1.4-1.2 2.5 0 0 .5-1.1 1.7-1.8 1.4-.8 2.1-1.7 1.8-2.8-.3-1-1.3-1.9-.7-1zm-3.3-3.6c.4 1-.3 1.9-1.2 2.6-.8.6-1.5 1.2-1 2.2 0 0 .4-1 1.4-1.6 1.1-.7 1.7-1.5 1.4-2.4-.2-.8-.9-1.5-.6-.8z"></path></svg>
+</div>
+<span class="text-xs font-mono font-bold text-white group-hover:text-[#00F5A0] transition-colors">JAVA 21</span>
+<span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mt-0.5">Core Language</span>
+</div>
+<!-- Spring Boot -->
+<div class="skill-tile rounded-xl bg-base-850 p-4 border border-white/10 hover:border-[#00D9F5]/50 transition-all flex flex-col items-center justify-center text-center group">
+<div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-[#00D9F5] mb-2.5 group-hover:scale-110 transition-transform">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21.2 8.4c-1.3-4.1-5.3-6.9-9.8-6.4C6 2.6 1.7 7.3 2 12.8c.2 4.4 3.2 8.2 7.5 9.2 4.8 1.2 9.6-1.3 11.5-5.8.4-.9.2-1.8-.4-2.4-.6-.6-1.5-.8-2.4-.4-1.3.6-2.8.8-4.2.5 1.6-.7 3.1-1.8 4.2-3.1 1-1.2 2.3-1.9 3-2.4zm-9.2 9.6c-3.3 0-6-2.7-6-6s2.7-6 6-6c1.6 0 3.1.6 4.2 1.8-2.6 1.3-4.7 3.6-5.8 6.4-.3.9-.1 1.9.4 2.6.4.8 1.2 1.2 2.2 1.2h.3c-.4 0-.9 0-1.3 0z"></path></svg>
+</div>
+<span class="text-xs font-mono font-bold text-white group-hover:text-[#00D9F5] transition-colors">SPRING BOOT</span>
+<span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mt-0.5">Framework</span>
+</div>
+<!-- Angular -->
+<div class="skill-tile rounded-xl bg-base-850 p-4 border border-white/10 hover:border-cyan-400/50 transition-all flex flex-col items-center justify-center text-center group">
+<div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-cyan-400 mb-2.5 group-hover:scale-110 transition-transform">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.5L3.5 5.5l1.3 11.4L12 21.5l7.2-4.6 1.3-11.4L12 2.5zm0 2.8l5.4 12.1h-2.1l-1.1-2.8H9.8l-1.1 2.8H6.6L12 5.3zm1.5 7.6L12 8.6l-1.5 4.3h3z"></path></svg>
+</div>
+<span class="text-xs font-mono font-bold text-white group-hover:text-cyan-400 transition-colors">ANGULAR 18</span>
+<span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mt-0.5">Frontend SPA</span>
+</div>
+<!-- TypeScript -->
+<div class="skill-tile rounded-xl bg-base-850 p-4 border border-white/10 hover:border-cyan-400/50 transition-all flex flex-col items-center justify-center text-center group">
+<div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-cyan-400 mb-2.5 group-hover:scale-110 transition-transform">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M3 3h18v18H3V3zm8.3 12.9v-6h-2.1V8.5h5.8v1.4h-2.1v6h-1.6zm4.7-.2c.7.4 1.4.6 2.2.6 1.1 0 1.8-.5 1.8-1.3 0-.8-.6-1.1-1.6-1.5l-.6-.2c-1.3-.5-2.1-1.3-2.1-2.4 0-1.5 1.2-2.7 3.1-2.7.9 0 1.7.2 2.3.6l-.5 1.3c-.5-.3-1.1-.5-1.8-.5-1.1 0-1.6.5-1.6 1.1 0 .7.6 1 1.5 1.4l.6.2c1.4.5 2.2 1.3 2.2 2.5 0 1.7-1.3 2.7-3.4 2.7-1 0-2-.3-2.7-.8l.5-1.4z"></path></svg>
+</div>
+<span class="text-xs font-mono font-bold text-white group-hover:text-cyan-400 transition-colors">TYPESCRIPT</span>
+<span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mt-0.5">Strict Types</span>
+</div>
+<!-- PostgreSQL -->
+<div class="skill-tile rounded-xl bg-base-850 p-4 border border-white/10 hover:border-blue-400/50 transition-all flex flex-col items-center justify-center text-center group">
+<div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-blue-400 mb-2.5 group-hover:scale-110 transition-transform">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.3 2 11.5c0 3.2 1.7 6.1 4.3 7.8v-2.3C4.9 15.6 4 13.7 4 11.5 4 7.4 7.6 4 12 4s8 3.4 8 7.5c0 2.2-.9 4.1-2.3 5.5v2.3c2.6-1.7 4.3-4.6 4.3-7.8C22 6.3 17.5 2 12 2zm-1 5c-1.7 0-3 1.3-3 3v5c0 .6.4 1 1 1s1-.4 1-1v-4h2v4c0 .6.4 1 1 1s1-.4 1-1v-5c0-1.7-1.3-3-3-3zm0 2c.6 0 1 .4 1 1v1h-2v-1c0-.6.4-1 1-1z"></path></svg>
+</div>
+<span class="text-xs font-mono font-bold text-white group-hover:text-blue-400 transition-colors">POSTGRESQL</span>
+<span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mt-0.5">Database</span>
+</div>
+<!-- Spring Security -->
+<div class="skill-tile rounded-xl bg-base-850 p-4 border border-white/10 hover:border-purple-400/50 transition-all flex flex-col items-center justify-center text-center group">
+<div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-purple-400 mb-2.5 group-hover:scale-110 transition-transform">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4 5.5v6c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12v-6L12 2zm0 4.2c1.9 0 3.5 1.6 3.5 3.5 0 1.2-.6 2.3-1.6 2.9v2.4h-3.8v-2.4c-1-.6-1.6-1.7-1.6-2.9 0-1.9 1.6-3.5 3.5-3.5z"></path></svg>
+</div>
+<span class="text-xs font-mono font-bold text-white group-hover:text-purple-400 transition-colors">SECURITY 7</span>
+<span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mt-0.5">HMAC / JWT</span>
+</div>
+<!-- Tailwind CSS -->
+<div class="skill-tile rounded-xl bg-base-850 p-4 border border-white/10 hover:border-sky-400/50 transition-all flex flex-col items-center justify-center text-center group">
+<div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-sky-400 mb-2.5 group-hover:scale-110 transition-transform">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.336 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z"></path></svg>
+</div>
+<span class="text-xs font-mono font-bold text-white group-hover:text-sky-400 transition-colors">TAILWIND</span>
+<span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mt-0.5">Styling</span>
+</div>
+<!-- Android / Java -->
+<div class="skill-tile rounded-xl bg-base-850 p-4 border border-white/10 hover:border-[#00F5A0]/50 transition-all flex flex-col items-center justify-center text-center group">
+<div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-[#00F5A0] mb-2.5 group-hover:scale-110 transition-transform">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.5 15.3c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m-11 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m11.4-6l2-3.5c.1-.2 0-.5-.2-.6-.2-.1-.5 0-.6.2l-2 3.5C15.6 8.4 13.9 8 12 8s-3.6.4-5.1.9l-2-3.5c-.1-.2-.4-.3-.6-.2-.2.1-.3.4-.2.6l2 3.5C2.7 11.2.3 14.7 0 18.8h24c-.3-4.1-2.7-7.6-6.1-9.5"></path></svg>
+</div>
+<span class="text-xs font-mono font-bold text-white group-hover:text-[#00F5A0] transition-colors">ANDROID</span>
+<span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mt-0.5">Native Client</span>
+</div>
+<!-- Flutter / Dart -->
+<div class="skill-tile rounded-xl bg-base-850 p-4 border border-white/10 hover:border-cyan-400/50 transition-all flex flex-col items-center justify-center text-center group">
+<div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-cyan-400 mb-2.5 group-hover:scale-110 transition-transform">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.3 0L2.3 12 6 15.7 21.7 0h-7.4zm0 11.5L8.7 17.1l3.7 3.7 3.6-3.6 5.7 5.7h7.4l-9.4-9.4-5.4-2z"></path></svg>
+</div>
+<span class="text-xs font-mono font-bold text-white group-hover:text-cyan-400 transition-colors">FLUTTER</span>
+<span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mt-0.5">Mobile App</span>
+</div>
+<!-- Google Gemini AI -->
+<div class="skill-tile rounded-xl bg-base-850 p-4 border border-white/10 hover:border-amber-400/50 transition-all flex flex-col items-center justify-center text-center group">
+<div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-amber-400 mb-2.5 group-hover:scale-110 transition-transform">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z"></path></svg>
+</div>
+<span class="text-xs font-mono font-bold text-white group-hover:text-amber-400 transition-colors">GEMINI 1.5</span>
+<span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mt-0.5">AI Grounding</span>
+</div>
+<!-- Git / GitHub -->
+<div class="skill-tile rounded-xl bg-base-850 p-4 border border-white/10 hover:border-red-400/50 transition-all flex flex-col items-center justify-center text-center group">
+<div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-red-400 mb-2.5 group-hover:scale-110 transition-transform">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M2.6 10.59L8.38 4.8a1.37 1.37 0 0 1 1.94 0l1.32 1.32c-.08.18-.14.37-.14.58a1.7 1.7 0 0 0 1.7 1.7c.21 0 .4-.06.58-.14l2.84 2.84a1.7 1.7 0 0 0 2.28 2.28l3.1 3.1a1.37 1.37 0 0 1 0 1.94l-5.79 5.79a1.37 1.37 0 0 1-1.94 0L2.6 12.53a1.37 1.37 0 0 1 0-1.94z"></path></svg>
+</div>
+<span class="text-xs font-mono font-bold text-white group-hover:text-red-400 transition-colors">GIT</span>
+<span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mt-0.5">VCS</span>
+</div>
+<!-- Linux / REST -->
+<div class="skill-tile rounded-xl bg-base-850 p-4 border border-white/10 hover:border-[#00D9F5]/50 transition-all flex flex-col items-center justify-center text-center group">
+<div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-[#00D9F5] mb-2.5 group-hover:scale-110 transition-transform">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span class="text-xs font-mono font-bold text-white group-hover:text-[#00D9F5] transition-colors">REST / LINUX</span>
+<span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mt-0.5">Architecture</span>
+</div>
+</div>
+<!-- Deep Breakdown 2-Column Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="rounded-2xl bg-base-850 p-6 border border-white/10 space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-white/10">
+<h3 class="text-base font-bold text-white flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#00F5A0]"></span> Enterprise Backend Engineering
+          </h3>
+<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#00F5A0]/15 text-[#00F5A0] border border-[#00F5A0]/30 font-bold">PRIMARY</span>
+</div>
+<div class="space-y-3 text-xs">
+<div>
+<span class="text-white font-medium block">Java (JDK 17 / 21 / 23)</span>
+<span class="text-slate-400">Object-oriented domain modeling, concurrency, streams, and modern language features.</span>
+</div>
+<div>
+<span class="text-white font-medium block">Spring Boot 4.x / 3.x</span>
+<span class="text-slate-400">Layered RESTful architecture, dependency injection, and centralized exception handling.</span>
+</div>
+<div>
+<span class="text-white font-medium block">Spring Security</span>
+<span class="text-slate-400">Stateless JWT filters, per-user HMAC token signing, and role-based authorization.</span>
+</div>
+<div>
+<span class="text-white font-medium block">PostgreSQL &amp; SQL</span>
+<span class="text-slate-400">Relational schema design, foreign keys, indexing, constraints, and ACID transactions.</span>
+</div>
+</div>
+</div>
+<div class="rounded-2xl bg-base-850 p-6 border border-white/10 space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-white/10">
+<h3 class="text-base font-bold text-white flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-cyan-400"></span> Modern Reactive Frontend
+          </h3>
+<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-cyan-400/15 text-cyan-400 border border-cyan-400/30 font-bold">PRIMARY</span>
+</div>
+<div class="space-y-3 text-xs">
+<div>
+<span class="text-white font-medium block">Angular 18 / 17</span>
+<span class="text-slate-400">Standalone component architecture, reactive forms, and lazy-loaded routing.</span>
+</div>
+<div>
+<span class="text-white font-medium block">TypeScript 5 / 6</span>
+<span class="text-slate-400">Strict type-checking, generic interfaces, and type safety across services.</span>
+</div>
+<div>
+<span class="text-white font-medium block">Tailwind CSS</span>
+<span class="text-slate-400">Design tokens, mobile-first responsive grids, and theme switching.</span>
+</div>
+<div>
+<span class="text-white font-medium block">Angular Signals &amp; RxJS</span>
+<span class="text-slate-400">Fine-grained reactive primitives, computed dependencies, and asynchronous streams.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Journey / Timeline Section -->
+<section class="py-20 border-t border-white/10" id="journey">
+<div class="space-y-2 mb-12">
+<div class="flex items-center gap-2 font-mono text-xs font-bold tracking-widest uppercase text-gradient-em-cyan">
+<span class="text-[#00F5A0]">▶</span> <span>BACKGROUND</span>
+</div>
+<h2 class="text-4xl sm:text-5xl font-display tracking-wide text-white">EDUCATION &amp; EXPERIENCE</h2>
+<div class="w-12 h-1 gradient-em-cyan rounded-full mt-2"></div>
+<p class="text-slate-400 max-w-2xl text-sm pt-2">Tracing academic science education, intensive enterprise scholarship training, and software architecture milestones.</p>
+</div>
+<!-- Glowing Timeline with side Year Badge -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Timeline Items -->
+<div class="lg:col-span-8 relative pl-6 border-l-2 border-base-750 space-y-8">
+<!-- Milestone 1 -->
+<div class="relative group">
+<div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#00F5A0] shadow-[0_0_12px_#00F5A0] border-2 border-base-900" style="background-color: rgb(45, 212, 191); box-shadow: rgba(45, 212, 191, 0.75) 0px 0px 12px;"></div>
+<div class="p-6 rounded-2xl bg-base-850 border border-white/10 hover:border-[#00F5A0]/40 transition-all">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<span class="text-xs font-mono text-gradient-em-cyan font-bold tracking-wider">2025 – PRESENT • FLAGSHIP MILESTONE</span>
+<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#00F5A0]/15 text-[#00F5A0] border border-[#00F5A0]/30 font-semibold" style="background-color: rgba(13, 148, 136, 0.2); color: rgb(45, 212, 191); border-color: rgba(45, 212, 191, 0.35);">Full-Stack Ecosystem</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Enterprise Full-Stack Ecosystem (Horizon Platform)</h3>
+<p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Architected Horizon: a full-stack platform with Spring Boot 4 / Java 21 backend, Angular 22 web SPA, and dedicated Android (Retrofit) and Flutter mobile clients. Implemented dynamic HMAC token invalidation, Leaflet GIS tracking, and Gemini AI catalog grounding.
+            </p>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="relative group">
+<div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#00D9F5] shadow-[0_0_12px_#00D9F5] border-2 border-base-900"></div>
+<div class="p-6 rounded-2xl bg-base-850 border border-white/10 hover:border-[#00D9F5]/40 transition-all">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<span class="text-xs font-mono text-cyan-400 font-bold tracking-wider">2024 – 2025 • PROFESSIONAL SCHOLARSHIP</span>
+<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-cyan-400/15 text-cyan-400 border border-cyan-400/30 font-semibold">Enterprise Training</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Full-Stack Web Development Scholar — IsDB-BISEW IT Scholarship</h3>
+<p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Completed an intensive, full-time enterprise curriculum covering Java SE/EE, Spring Boot, Hibernate/JPA, Angular, TypeScript, relational database modeling, and software engineering methodologies.
+            </p>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="relative group">
+<div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-blue-400 shadow-[0_0_12px_#3B82F6] border-2 border-base-900"></div>
+<div class="p-6 rounded-2xl bg-base-850 border border-white/10 hover:border-blue-400/40 transition-all">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+<span class="text-xs font-mono text-blue-400 font-bold tracking-wider">DEGREE COMPLETED • ACADEMIC SCIENCE</span>
+<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-blue-400/15 text-blue-400 border border-blue-400/30 font-semibold">Academic Science</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">BS (Honours) — University of Dhaka</h3>
+<p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Cultivated analytical rigor, scientific research methodology, hypothesis validation, and systemic problem decomposition at Bangladesh's premier institution, shaping a disciplined approach to software architecture.
+            </p>
+</div>
+</div>
+</div>
+<!-- Right Year / Persona Badge -->
+<div class="lg:col-span-4 flex flex-col items-center justify-center p-8 rounded-2xl bg-base-850 border border-white/10 text-center">
+<span class="font-display text-7xl sm:text-8xl text-base-750 leading-none select-none">2025</span>
+<h4 class="font-display text-2xl text-gradient-em-cyan tracking-wide uppercase mt-[-10px]">MOHAMMAD ALI</h4>
+<p class="text-xs font-mono text-slate-400">Enterprise Engineer Ready</p>
+<div class="mt-6 pt-6 border-t border-white/10 w-full space-y-2 text-xs font-mono text-left">
+<div class="flex justify-between text-slate-400">
+<span>Specialization:</span>
+<span class="text-white">Java / Angular</span>
+</div>
+<div class="flex justify-between text-slate-400">
+<span>Training:</span>
+<span class="text-[#00F5A0]">IsDB-BISEW</span>
+</div>
+<div class="flex justify-between text-slate-400">
+<span>University:</span>
+<span class="text-white">Dhaka University</span>
+</div>
+<div class="flex justify-between text-slate-400">
+<span>Status:</span>
+<span class="text-[#00D9F5]">Immediate Joiner</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-20 border-t border-white/10" id="about">
+<div class="space-y-2 mb-12">
+<div class="flex items-center gap-2 font-mono text-xs font-bold tracking-widest uppercase text-gradient-em-cyan">
+<span class="text-[#00F5A0]">▶</span> <span>ABOUT ME</span>
+</div>
+<h2 class="text-4xl sm:text-5xl font-display tracking-wide text-white">ENGINEERING DISCIPLINE &amp; BACKGROUND</h2>
+<div class="w-12 h-1 gradient-em-cyan rounded-full mt-2"></div>
+<p class="text-slate-400 max-w-2xl text-sm pt-2">How scientific rigor and intensive enterprise training translate into a disciplined, architecture-first approach to software engineering.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-6 space-y-6">
+<div class="bg-base-850 rounded-2xl p-6 sm:p-7 border border-white/10 space-y-4">
+<p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+            I build type-safe, production-ready full-stack applications using modern Java, Spring Boot, Angular, TypeScript, and SQL. My architecture emphasizes decoupled layers, strict REST contracts, and defensible engineering choices.
+          </p>
+<p class="text-slate-400 leading-relaxed text-sm">
+            Bridging an academic science foundation with rigorous enterprise software training gives me a disciplined approach to complex systems—from multi-tenant role isolation to real-time GIS telemetry and cross-platform mobile companions.
+          </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
+<div class="p-4 rounded-xl bg-base-850 border border-white/10">
+<span class="text-slate-500 block mb-1">Academic Degree</span>
+<p class="font-semibold text-white">BS (Honours)</p>
+<p class="text-[#00F5A0] text-[11px]">University of Dhaka</p>
+</div>
+<div class="p-4 rounded-xl bg-base-850 border border-white/10">
+<span class="text-slate-500 block mb-1">Enterprise Training</span>
+<p class="font-semibold text-white">Full-Stack Enterprise</p>
+<p class="text-[#00D9F5] text-[11px]">IsDB-BISEW Scholar</p>
+</div>
+<div class="p-4 rounded-xl bg-base-850 border border-white/10">
+<span class="text-slate-500 block mb-1">Location &amp; Hub</span>
+<p class="font-semibold text-white">Dhaka, Bangladesh</p>
+<p class="text-slate-400 text-[11px]">UTC+6 Timezone</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 space-y-3.5">
+<p class="font-mono text-xs uppercase text-slate-400 tracking-wider mb-2">Core Engineering Principles</p>
+<div class="p-4 rounded-xl bg-base-850 border border-white/10 hover:border-[#00F5A0]/40 transition-all">
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-base-800 text-[#00F5A0] flex items-center justify-center font-mono text-xs font-bold mt-0.5 border border-[#00F5A0]/30">01</div>
+<div>
+<h3 class="text-sm font-semibold text-white">Type Safety &amp; Strict Contracts</h3>
+<p class="text-xs text-slate-400 mt-1 leading-relaxed">End-to-end typing across domain DTOs, reactive forms, and API interfaces prevents runtime regressions.</p>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-base-850 border border-white/10 hover:border-cyan-400/40 transition-all">
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-base-800 text-cyan-400 flex items-center justify-center font-mono text-xs font-bold mt-0.5 border border-cyan-400/30">02</div>
+<div>
+<h3 class="text-sm font-semibold text-white">Multi-Client Architecture</h3>
+<p class="text-xs text-slate-400 mt-1 leading-relaxed">Unified Spring Boot backend securely powering Web (Angular), Native Android, and Flutter mobile clients.</p>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-base-850 border border-white/10 hover:border-purple-400/40 transition-all">
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-base-800 text-purple-400 flex items-center justify-center font-mono text-xs font-bold mt-0.5 border border-purple-400/30">03</div>
+<div>
+<h3 class="text-sm font-semibold text-white">Zero-Blacklist Security</h3>
+<p class="text-xs text-slate-400 mt-1 leading-relaxed">Stateless JWT tokens bound cryptographically to user password hashes for instant revocation on credential change.</p>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-base-850 border border-white/10 hover:border-[#00D9F5]/40 transition-all">
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-base-800 text-[#00D9F5] flex items-center justify-center font-mono text-xs font-bold mt-0.5 border border-[#00D9F5]/30">04</div>
+<div>
+<h3 class="text-sm font-semibold text-white">Accessible &amp; Responsive Design</h3>
+<p class="text-xs text-slate-400 mt-1 leading-relaxed">Semantic HTML5, high-contrast typography, and fluid layouts optimized across mobile and desktop.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-20 border-t border-white/10" id="contact">
+<div class="space-y-2 mb-12">
+<div class="flex items-center gap-2 font-mono text-xs font-bold tracking-widest uppercase text-gradient-em-cyan">
+<span class="text-[#00F5A0]">▶</span> <span>GET IN TOUCH</span>
+</div>
+<h2 class="text-4xl sm:text-5xl font-display tracking-wide text-white">SEND A MESSAGE</h2>
+<div class="w-12 h-1 gradient-em-cyan rounded-full mt-2"></div>
+<p class="text-slate-400 max-w-2xl text-sm pt-2">Whether you have an open Junior Full-Stack / Java / Angular role, a technical inquiry, or want to explore my code.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left side: contact prompt -->
+<div class="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-base-850 border border-white/10 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00F5A0]/15 text-[#00F5A0] border border-[#00F5A0]/30 text-xs font-mono font-semibold" style="background-color: rgba(13, 148, 136, 0.2); color: rgb(45, 212, 191); border-color: rgba(45, 212, 191, 0.35);">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00F5A0]"></span> Currently considering Junior Full-Stack opportunities
+        </div>
+<h3 class="text-3xl font-extrabold text-white leading-tight">Let's build something together.</h3>
+<p class="text-sm text-slate-300 leading-relaxed">
+          I am based in Dhaka, Bangladesh and open to on-site, hybrid, and remote engineering positions worldwide.
+        </p>
+<!-- Quick Email Copy Widget -->
+<div class="p-3.5 rounded-xl bg-base-900 border border-white/10 flex items-center justify-between gap-2">
+<span class="font-mono text-xs sm:text-sm text-[#00F5A0] truncate" style="color: rgb(45, 212, 191);">mohammadalisikder45-2019317083@zoo.du.ac.bd</span>
+<button class="px-3 py-1.5 rounded-lg bg-base-800 hover:bg-base-750 text-xs font-mono text-slate-300 hover:text-white border border-white/10 transition-colors flex items-center gap-1.5 flex-shrink-0" id="copy-email-btn">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span id="copy-email-text">Copy</span>
+</button>
+</div>
+<!-- Dual Action Buttons -->
+<div class="flex flex-wrap gap-4 pt-2">
+<a class="px-6 py-3 rounded-full gradient-em-cyan text-base-950 font-mono font-bold text-xs tracking-wider uppercase transition-all btn-gradient-glow hover:scale-105 flex items-center gap-2" href="mailto:mohammadalisikder45-2019317083@zoo.du.ac.bd">
+<svg class="w-4 h-4 text-base-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>MAIL ME</span>
+</a>
+<a class="px-6 py-3 rounded-full bg-base-800 hover:bg-base-750 text-white font-mono font-bold text-xs tracking-wider uppercase border border-white/10 hover:border-[#00D9F5] transition-all flex items-center gap-2" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4 text-[#00F5A0] fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+<span>LINKEDIN</span>
+</a>
+</div>
+</div>
+<!-- Right side: contact channels list -->
+<div class="lg:col-span-5 space-y-4">
+<div class="p-4 rounded-xl bg-base-850 border border-white/10 flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-base-800 flex items-center justify-center text-[#00F5A0]">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">EMAIL</span>
+<a class="text-xs sm:text-sm font-semibold text-white hover:text-[#00F5A0] transition-colors" href="mailto:mohammadalisikder45-2019317083@zoo.du.ac.bd">mohammadalisikder45-2019317083@zoo.du.ac.bd</a>
+</div>
+</div>
+<a class="p-4 rounded-xl bg-base-850 border border-white/10 hover:border-[#00D9F5]/40 transition-all flex items-center justify-between group" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-base-800 flex items-center justify-center text-blue-400">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</div>
+<div>
+<span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">LINKEDIN</span>
+<span class="text-sm font-semibold text-white group-hover:text-[#00D9F5] transition-colors">Mohammad Ali Sikder</span>
+</div>
+</div>
+<span class="text-slate-500 group-hover:text-[#00D9F5] transition-colors">↗</span>
+</a>
+<a class="p-4 rounded-xl bg-base-850 border border-white/10 hover:border-[#00F5A0]/40 transition-all flex items-center justify-between group" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-base-800 flex items-center justify-center text-white">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</div>
+<div>
+<span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">GITHUB</span>
+<span class="text-sm font-semibold text-white group-hover:text-[#00F5A0] transition-colors">Inspect Repositories</span>
+</div>
+</div>
+<span class="text-slate-500 group-hover:text-[#00F5A0] transition-colors">↗</span>
+</a>
+<div class="p-4 rounded-xl bg-base-850 border border-white/10 flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-base-800 flex items-center justify-center text-[#00D9F5]">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">LOCATION</span>
+<span class="text-sm font-semibold text-white">Dhaka, Bangladesh (Remote • On-Site)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-20 border-t border-white/10 bg-base-950 py-12 text-slate-400 text-xs">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+<div class="text-center sm:text-left">
+<span class="text-white font-bold block text-sm tracking-wide">Mohammad Ali Sikder Ramim</span>
+<span class="text-slate-500 text-xs font-mono">Java 21 • Spring Boot 3.3 • Angular 18 • PostgreSQL</span>
+</div>
+<div class="flex items-center gap-6 font-mono text-xs uppercase tracking-wider">
+<a class="hover:text-[#00F5A0] transition-colors" href="#hero">Home</a>
+<a class="hover:text-[#00F5A0] transition-colors" href="#projects">Projects</a>
+<a class="hover:text-[#00F5A0] transition-colors" href="#skills">Skills</a>
+<a class="hover:text-[#00F5A0] transition-colors" href="#journey">Journey</a>
+<a class="hover:text-[#00F5A0] transition-colors" href="#contact">Contact</a>
+</div>
+<p class="text-slate-500 font-mono text-center sm:text-right">
+      Mohammad Ali Sikder © 2025<br>
+<span class="text-slate-600 text-[11px]">Learn, Build, and Strive.</span>
+</p>
+</div>
+</footer>
+<!-- Interactive Theme Switcher Logic -->
+<script>
+  (function initTheme() {
+    const root = document.documentElement;
+    const btns = {
+      light: document.getElementById('btn-light'),
+      dark: document.getElementById('btn-dark'),
+      system: document.getElementById('btn-system')
+    };
+
+    function applyTheme(mode) {
+      // Clear active styles on all buttons
+      Object.values(btns).forEach(b => {
+        if (!b) return;
+        b.className = 'theme-btn px-2.5 py-1 rounded-lg text-xs font-mono text-slate-400 hover:text-white transition-all flex items-center gap-1.5';
+      });
+
+      // Highlight active button
+      if (btns[mode]) {
+        btns[mode].className = 'theme-btn px-2.5 py-1 rounded-lg text-xs font-mono text-base-950 gradient-em-cyan border border-[#00F5A0] shadow-sm transition-all flex items-center gap-1.5 font-bold';
+      }
+
+      if (mode === 'light') {
+        root.classList.add('theme-light');
+      } else if (mode === 'dark') {
+        root.classList.remove('theme-light');
+      } else if (mode === 'system') {
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (isDark) {
+          root.classList.remove('theme-light');
+        } else {
+          root.classList.add('theme-light');
+        }
+      }
+    }
+
+    if (btns.light) btns.light.addEventListener('click', () => applyTheme('light'));
+    if (btns.dark) btns.dark.addEventListener('click', () => applyTheme('dark'));
+    if (btns.system) btns.system.addEventListener('click', () => applyTheme('system'));
+
+    // Listen to system changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      const activeBtn = document.querySelector('.theme-btn.gradient-em-cyan');
+      if (activeBtn && activeBtn.id === 'btn-system') {
+        applyTheme('system');
+      }
+    });
+
+    // Copy email button
+    const copyBtn = document.getElementById('copy-email-btn');
+    const copyTxt = document.getElementById('copy-email-text');
+    if (copyBtn && copyTxt) {
+      copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText('mohammadalisikder45-2019317083@zoo.du.ac.bd').then(() => {
+          copyTxt.textContent = 'Copied!';
+          setTimeout(() => { copyTxt.textContent = 'Copy'; }, 2000);
+        });
+      });
+    }
+  })();
+</script>
+
+
+</body></html>
