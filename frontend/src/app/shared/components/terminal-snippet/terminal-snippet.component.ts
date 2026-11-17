@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="rounded-xl border shadow-xl overflow-hidden w-full max-w-sm sm:max-w-md lg:max-w-[400px] xl:max-w-[420px] mx-auto transition-colors" id="code-box">
+    <div class="rounded-xl border shadow-xl overflow-hidden w-full max-w-sm sm:max-w-md lg:max-w-[400px] xl:max-w-[420px] mx-auto neon-border-glow transition-all duration-300" id="code-box">
       <!-- Window Title Bar -->
       <div class="px-3.5 py-2 flex items-center justify-between border-b" id="code-box-header">
         <div class="flex items-center gap-1.5">
