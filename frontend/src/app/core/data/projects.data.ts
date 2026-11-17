@@ -116,7 +116,7 @@ export const PROJECTS_DATA: PortfolioProject[] = [
       'Grounded AI integrations require strict deterministic boundaries; LLMs should act as intent parsers rather than autonomous transaction creators.',
       'Fine-grained role authorization is easiest to audit when enforced simultaneously at the route guard level (Angular) and the HTTP security filter chain (Spring Boot).'
     ],
-    githubUrl: 'https://github.com/ali8012026masr/Horizon-All-in-one-Travel-Booking-Web-App',
+    githubUrl: 'https://github.com/alisikder/Horizon-All-in-one-Travel-Booking-Web-App',
     demoCredentials: [
       { role: 'Administrator', email: 'admin@horizon.demo', pass: 'demo1234' },
       { role: 'Service Provider', email: 'provider@horizon.demo', pass: 'demo1234' },
@@ -185,7 +185,7 @@ export const PROJECTS_DATA: PortfolioProject[] = [
     lessonsLearned: [
       'Designing strict RESTful API contracts upfront enables parallel web and mobile client development without backend refactoring.'
     ],
-    githubUrl: 'https://github.com/ali8012026masr/HorizonTourist'
+    githubUrl: 'https://github.com/alisikder/HorizonTourist'
   },
   {
     slug: 'horizon-flutter',
@@ -245,7 +245,7 @@ export const PROJECTS_DATA: PortfolioProject[] = [
     lessonsLearned: [
       'Declarative cross-platform UI dramatically accelerates mobile client iterations against pre-established REST APIs.'
     ],
-    githubUrl: 'https://github.com/ali8012026masr/horizonflutter'
+    githubUrl: 'https://github.com/alisikder/horizonflutter'
   },
   {
     slug: 'bangla-akinator',
@@ -319,6 +319,6 @@ export const PROJECTS_DATA: PortfolioProject[] = [
     lessonsLearned: [
       'Information theory principles translate directly into efficient search spaces and minimal user interaction steps.'
     ],
-    githubUrl: 'https://github.com/ali8012026masr/bangla_akinator'
+    githubUrl: 'https://github.com/alisikder/bangla_akinator'
   }
 ];

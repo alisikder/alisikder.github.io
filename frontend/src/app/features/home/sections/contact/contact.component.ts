@@ -1,32 +1,32 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SectionHeaderComponent } from '../../../../shared/components/section-header/section-header.component';
 import { PROFILE_DATA } from '../../../../core/data/profile.data';
 
 @Component({
   selector: 'app-contact-section',
   standalone: true,
-  imports: [CommonModule, SectionHeaderComponent],
+  imports: [CommonModule],
   template: `
-    <section id="contact" class="py-20 border-t border-white/10" aria-labelledby="contact-header">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <app-section-header
-          number="05"
-          tag="GET IN TOUCH"
-          title="SEND A MESSAGE"
-          description="Whether you have an open Junior Full-Stack / Java / Angular role, a technical inquiry, or want to explore my code."
-        />
+    <section class="py-20 border-t border-white/10" id="contact" aria-labelledby="contact-header">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-2 mb-12">
+          <div class="flex items-center gap-2 font-mono text-xs font-bold tracking-widest uppercase text-gradient-em-cyan">
+            <span class="text-[#00F5A0]">▶</span> <span>GET IN TOUCH</span>
+          </div>
+          <h2 class="text-4xl sm:text-5xl font-display tracking-wide text-text-main">SEND A MESSAGE</h2>
+          <div class="w-12 h-1 gradient-em-cyan rounded-full mt-2"></div>
+          <p class="text-slate-400 max-w-2xl text-sm pt-2 font-sans">Whether you have an open Junior Full-Stack / Java / Angular role, a technical inquiry, or want to explore my code.</p>
+        </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <!-- Left side: Contact Prompt Card (7 cols) -->
+          <!-- Left side: contact prompt (7 cols) -->
           <div class="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-base-850 border border-white/10 space-y-6">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00F5A0]/15 text-[#00F5A0] border border-[#00F5A0]/30 text-xs font-mono font-semibold">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#00F5A0] animate-pulse"></span>
-              Currently considering Junior Full-Stack opportunities
+              <span class="w-1.5 h-1.5 rounded-full bg-[#00F5A0]"></span> Currently considering Junior Full-Stack opportunities
             </div>
 
-            <h3 class="text-3xl font-extrabold text-text-main leading-tight font-display tracking-wide uppercase">
-              LET'S BUILD SOMETHING TOGETHER.
+            <h3 class="text-3xl font-extrabold text-text-main leading-tight font-sans">
+              Let's build something together.
             </h3>
 
             <p class="text-sm text-slate-300 leading-relaxed font-sans">
@@ -54,8 +54,8 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
             <!-- Dual Action Buttons -->
             <div class="flex flex-wrap gap-4 pt-2">
               <a
-                [href]="'mailto:' + profile.email"
                 class="px-6 py-3 rounded-full gradient-em-cyan text-base-950 font-mono font-bold text-xs tracking-wider uppercase transition-all btn-gradient-glow hover:scale-105 flex items-center gap-2 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
+                [href]="'mailto:' + profile.email"
               >
                 <svg class="w-4 h-4 text-base-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -64,10 +64,10 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
               </a>
 
               <a
-                [href]="profile.linkedin"
-                target="_blank"
-                rel="noopener noreferrer"
                 class="px-6 py-3 rounded-full bg-base-800 hover:bg-base-750 text-text-main font-mono font-bold text-xs tracking-wider uppercase border border-white/10 hover:border-[#00D9F5] transition-all flex items-center gap-2 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
+                [href]="profile.linkedin"
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 <svg class="w-4 h-4 text-[#00F5A0] fill-current" viewBox="0 0 24 24">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
@@ -77,9 +77,8 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
             </div>
           </div>
 
-          <!-- Right side: Contact Channels List (5 cols) -->
+          <!-- Right side: contact channels list (5 cols) -->
           <div class="lg:col-span-5 space-y-4">
-            <!-- Email Channel -->
             <div class="p-4 rounded-xl bg-base-850 border border-white/10 flex items-center gap-4">
               <div class="w-10 h-10 rounded-lg bg-base-800 flex items-center justify-center text-[#00F5A0]">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,22 +86,18 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
                 </svg>
               </div>
               <div class="min-w-0">
-                <span class="text-[11px] font-mono text-text-dim uppercase tracking-wider block">EMAIL</span>
-                <a
-                  [href]="'mailto:' + profile.email"
-                  class="text-xs sm:text-sm font-semibold text-text-main hover:text-[#00F5A0] transition-colors truncate block"
-                >
+                <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">EMAIL</span>
+                <a class="text-xs sm:text-sm font-semibold text-text-main hover:text-[#00F5A0] transition-colors truncate block" [href]="'mailto:' + profile.email">
                   {{ profile.email }}
                 </a>
               </div>
             </div>
 
-            <!-- LinkedIn Channel -->
             <a
-              [href]="profile.linkedin"
-              target="_blank"
-              rel="noopener noreferrer"
               class="p-4 rounded-xl bg-base-850 border border-white/10 hover:border-[#00D9F5]/40 transition-all flex items-center justify-between group"
+              [href]="profile.linkedin"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <div class="flex items-center gap-4">
                 <div class="w-10 h-10 rounded-lg bg-base-800 flex items-center justify-center text-blue-400">
@@ -111,21 +106,20 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
                   </svg>
                 </div>
                 <div>
-                  <span class="text-[11px] font-mono text-text-dim uppercase tracking-wider block">LINKEDIN</span>
+                  <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">LINKEDIN</span>
                   <span class="text-sm font-semibold text-text-main group-hover:text-[#00D9F5] transition-colors">
                     Mohammad Ali Sikder
                   </span>
                 </div>
               </div>
-              <span class="text-text-dim group-hover:text-[#00D9F5] transition-colors">↗</span>
+              <span class="text-slate-500 group-hover:text-[#00D9F5] transition-colors">↗</span>
             </a>
 
-            <!-- GitHub Channel -->
             <a
-              [href]="profile.github"
-              target="_blank"
-              rel="noopener noreferrer"
               class="p-4 rounded-xl bg-base-850 border border-white/10 hover:border-[#00F5A0]/40 transition-all flex items-center justify-between group"
+              [href]="profile.github"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <div class="flex items-center gap-4">
                 <div class="w-10 h-10 rounded-lg bg-base-800 flex items-center justify-center text-text-main">
@@ -134,16 +128,15 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
                   </svg>
                 </div>
                 <div>
-                  <span class="text-[11px] font-mono text-text-dim uppercase tracking-wider block">GITHUB</span>
+                  <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">GITHUB</span>
                   <span class="text-sm font-semibold text-text-main group-hover:text-[#00F5A0] transition-colors">
                     Inspect Repositories
                   </span>
                 </div>
               </div>
-              <span class="text-text-dim group-hover:text-[#00F5A0] transition-colors">↗</span>
+              <span class="text-slate-500 group-hover:text-[#00F5A0] transition-colors">↗</span>
             </a>
 
-            <!-- Location Channel -->
             <div class="p-4 rounded-xl bg-base-850 border border-white/10 flex items-center gap-4">
               <div class="w-10 h-10 rounded-lg bg-base-800 flex items-center justify-center text-[#00D9F5]">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -152,7 +145,7 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
                 </svg>
               </div>
               <div>
-                <span class="text-[11px] font-mono text-text-dim uppercase tracking-wider block">LOCATION</span>
+                <span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">LOCATION</span>
                 <span class="text-sm font-semibold text-text-main">Dhaka, Bangladesh (Remote • On-Site)</span>
               </div>
             </div>

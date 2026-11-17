@@ -1,4 +1,8 @@
-<div class="min-h-screen flex flex-col bg-canvas text-text-main font-body transition-colors duration-200">
+<div class="relative min-h-screen flex flex-col bg-canvas text-text-main font-body transition-colors duration-200 overflow-x-hidden">
+  <!-- Ambient Background Glows in Emerald and Electric Cyan (dark mode only) -->
+  <div class="fixed top-[-140px] right-[-100px] w-[550px] h-[550px] rounded-full bg-[#00F5A0]/10 blur-[130px] pointer-events-none -z-10 dark-glow-only"></div>
+  <div class="fixed bottom-[-100px] left-[-120px] w-[500px] h-[500px] rounded-full bg-[#00D9F5]/10 blur-[140px] pointer-events-none -z-10 dark-glow-only"></div>
+
   <app-navbar />
   <main class="flex-1 w-full" id="main-content">
     <router-outlet />

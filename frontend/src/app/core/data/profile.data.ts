@@ -9,8 +9,8 @@ export const PROFILE_DATA: ProfileData = {
   availability: 'Available for Developer Opportunities',
   isAvailable: true,
   email: 'mohammadalisikder-65-2019317881@zoo.du.ac.bd',
-  github: 'https://github.com/ali8012026masr',
-  linkedin: 'https://linkedin.com/in/ali8012026masr',
+  github: 'https://github.com/alisikder',
+  linkedin: 'https://www.linkedin.com/in/alisikder',
   cvUrl: 'documents/Mohammad_Ali_Sikder_Ramim_CV.pdf',
   hasApprovedCv: true,
   bioParagraphs: [
@@ -40,13 +40,13 @@ export const PROFILE_DATA: ProfileData = {
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'GitHub',
-    url: 'https://github.com/ali8012026masr',
+    url: 'https://github.com/alisikder',
     iconName: 'github',
     isExternal: true
   },
   {
     label: 'LinkedIn',
-    url: 'https://linkedin.com/in/ali8012026masr',
+    url: 'https://www.linkedin.com/in/alisikder',
     iconName: 'linkedin',
     isExternal: true
   },
