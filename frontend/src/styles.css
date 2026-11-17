@@ -72,40 +72,40 @@
 }
 
 /* ==========================================================================
-   Clean High-Contrast Light Theme Override
-   Crisp, dark typography, subdued non-glaring glows, sharp readability
+   Clean High-Contrast Warm Rice Paper & Cream Light Theme Override
+   Authentic Pre-Stitch Palette: Warm Off-White, Soft Cream Surfaces & Readable Typography
    ========================================================================== */
 
 [data-theme="light"],
 .theme-light {
-  --bg-canvas: #F4F5F7;
-  --bg-surface: #FFFFFF;
-  --bg-surface-elevated: #F8FAFC;
-  --bg-surface-hover: #E2E8F0;
-  --border-color: #E2E8F0;
-  --border-subtle: #CBD5E1;
+  --bg-canvas: #FAF9F5;              /* Warm rice paper off-white */
+  --bg-surface: #F1EFEA;             /* Soft cream surface */
+  --bg-surface-elevated: #F7F5F0;    /* Slightly elevated warm surface */
+  --bg-surface-hover: #E8E5DD;       /* Warm hover cream */
+  --border-color: #DDD8CD;           /* Warm taupe-cream border */
+  --border-subtle: #E5E0D5;          /* Softer warm border */
 
-  --base-950: #F1F5F9;
-  --base-900: #F4F5F7;
-  --base-850: #FFFFFF;
-  --base-800: #F8FAFC;
-  --base-750: #E2E8F0;
-  --base-700: #CBD5E1;
+  --base-950: #F5F3EC;               /* Subtle warm border/divider tone */
+  --base-900: #FAF9F5;               /* Canvas tone - warm rice paper */
+  --base-850: #F4F1EA;               /* Main card background - warm cream */
+  --base-800: #ECE6DC;               /* Inner pill/button surface */
+  --base-750: #E2DBD0;               /* Hover card/border tone */
+  --base-700: #D8D0C3;               /* Defined outline border */
 
-  --text-primary: #0F172A;
-  --text-secondary: #1E293B;
-  --text-muted: #475569;
-  --text-dim: #64748B;
+  --text-primary: #1E293B;           /* Deep dark charcoal slate, high contrast */
+  --text-secondary: #334155;         /* Crisp readable slate */
+  --text-muted: #475569;             /* Clear readable metadata */
+  --text-dim: #64748B;               /* Muted tags */
 
-  --accent-primary: #0D9488;
-  --accent-secondary: #0284C7;
-  --accent-badge: rgba(13, 148, 136, 0.12);
-  --accent-badge-text: #0F766E;
-  --color-amber: #D97706;
-  --color-amber-bg: rgba(217, 119, 6, 0.12);
-  --code-bg: #0B0F19;
+  --accent-primary: #15803D;         /* Forest emerald from pre-stitch */
+  --accent-secondary: #16A34A;       /* Leaf emerald from pre-stitch */
+  --accent-badge: #DCFCE7;           /* Warm light mint badge */
+  --accent-badge-text: #166534;      /* Deep green badge text */
+  --color-amber: #B45309;            /* Warm bronze amber */
+  --color-amber-bg: rgba(180, 83, 9, 0.12);
+  --code-bg: #0B0F19;                /* Code terminal stays dark for crisp syntax */
 
-  --grid-line: rgba(15, 23, 42, 0.04);
+  --grid-line: rgba(140, 130, 115, 0.08); /* Soft warm grid lines */
 }
 
 /* Explicit Dark Mode Override */
@@ -140,37 +140,37 @@
   --grid-line: rgba(255, 255, 255, 0.03);
 }
 
-/* Automatic System Light Fallback */
+/* Automatic System Light Fallback (Warm Rice Paper & Cream) */
 @media (prefers-color-scheme: light) {
   :root[data-theme="system"] {
-    --bg-canvas: #F4F5F7;
-    --bg-surface: #FFFFFF;
-    --bg-surface-elevated: #F8FAFC;
-    --bg-surface-hover: #E2E8F0;
-    --border-color: #E2E8F0;
-    --border-subtle: #CBD5E1;
+    --bg-canvas: #FAF9F5;
+    --bg-surface: #F1EFEA;
+    --bg-surface-elevated: #F7F5F0;
+    --bg-surface-hover: #E8E5DD;
+    --border-color: #DDD8CD;
+    --border-subtle: #E5E0D5;
 
-    --base-950: #F1F5F9;
-    --base-900: #F4F5F7;
-    --base-850: #FFFFFF;
-    --base-800: #F8FAFC;
-    --base-750: #E2E8F0;
-    --base-700: #CBD5E1;
+    --base-950: #F5F3EC;
+    --base-900: #FAF9F5;
+    --base-850: #F4F1EA;
+    --base-800: #ECE6DC;
+    --base-750: #E2DBD0;
+    --base-700: #D8D0C3;
 
-    --text-primary: #0F172A;
-    --text-secondary: #1E293B;
+    --text-primary: #1E293B;
+    --text-secondary: #334155;
     --text-muted: #475569;
     --text-dim: #64748B;
 
-    --accent-primary: #0D9488;
-    --accent-secondary: #0284C7;
-    --accent-badge: rgba(13, 148, 136, 0.12);
-    --accent-badge-text: #0F766E;
-    --color-amber: #D97706;
-    --color-amber-bg: rgba(217, 119, 6, 0.12);
+    --accent-primary: #15803D;
+    --accent-secondary: #16A34A;
+    --accent-badge: #DCFCE7;
+    --accent-badge-text: #166534;
+    --color-amber: #B45309;
+    --color-amber-bg: rgba(180, 83, 9, 0.12);
     --code-bg: #0B0F19;
 
-    --grid-line: rgba(15, 23, 42, 0.04);
+    --grid-line: rgba(140, 130, 115, 0.08);
   }
 }
 
@@ -270,10 +270,10 @@ body {
 }
 
 /* ==========================================================================
-   Light Mode Overrides for High Contrast & Readable Text (Fixes user issue)
+   Light Mode Overrides for Warm Rice Paper & Cream Theme
    ========================================================================== */
 
-/* Dark, readable headings & titles */
+/* Dark, readable headings & titles on warm cream canvas */
 .theme-light h1,
 .theme-light h2,
 .theme-light h3,
@@ -292,7 +292,7 @@ body {
 [data-theme="light"] .text-white,
 [data-theme="light"] .text-text-main,
 [data-theme="light"] .font-display {
-  color: #0F172A !important;
+  color: #1E293B !important;
 }
 
 /* Dark, high-contrast paragraphs, spans, body text */
@@ -316,25 +316,37 @@ body {
 [data-theme="light"] .text-slate-400,
 [data-theme="light"] .text-slate-500,
 [data-theme="light"] .text-slate-600 {
-  color: #334155 !important;
+  color: #475569 !important;
 }
 
-/* Deep, readable gradients instead of pale neon washout */
+/* Deep, readable emerald-to-teal gradients matching pre-stitch */
 .theme-light .text-gradient-em-cyan,
 [data-theme="light"] .text-gradient-em-cyan {
-  background: linear-gradient(135deg, #047857 0%, #0369A1 100%) !important;
+  background: linear-gradient(135deg, #15803D 0%, #0D9488 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
 
 .theme-light .text-gradient-cyan-teal,
 [data-theme="light"] .text-gradient-cyan-teal {
-  background: linear-gradient(135deg, #0284C7 0%, #0F766E 100%) !important;
+  background: linear-gradient(135deg, #0284C7 0%, #15803D 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
 
-/* Darker, rich jewel tone accents on light canvas */
+/* Primary CTA Button gradient on cream canvas */
+.theme-light .gradient-em-cyan,
+[data-theme="light"] .gradient-em-cyan {
+  background: linear-gradient(135deg, #15803D 0%, #0D9488 100%) !important;
+  color: #FFFFFF !important;
+}
+
+.theme-light .gradient-em-cyan *,
+[data-theme="light"] .gradient-em-cyan * {
+  color: #FFFFFF !important;
+}
+
+/* Darker, rich jewel tone accents on cream canvas */
 .theme-light .text-cyan-400,
 .theme-light .text-cyan-300,
 .theme-light .text-\[\#00D9F5\],
@@ -346,7 +358,17 @@ body {
 
 .theme-light .text-\[\#00F5A0\],
 [data-theme="light"] .text-\[\#00F5A0\] {
-  color: #047857 !important;
+  color: #15803D !important;
+}
+
+.theme-light .bg-\[\#00F5A0\],
+[data-theme="light"] .bg-\[\#00F5A0\] {
+  background-color: #15803D !important;
+}
+
+.theme-light .bg-\[\#00D9F5\],
+[data-theme="light"] .bg-\[\#00D9F5\] {
+  background-color: #0369A1 !important;
 }
 
 .theme-light .text-purple-400,
@@ -373,56 +395,81 @@ body {
   color: #B91C1C !important;
 }
 
-/* Cards & Elevated Containers */
+/* Cards & Elevated Containers in warm cream style */
 .theme-light .bg-base-850,
+[data-theme="light"] .bg-base-850 {
+  background-color: #F4F1EA !important;
+  border-color: #DDD8CD !important;
+  box-shadow: 0 1px 3px rgba(120, 110, 95, 0.08), 0 4px 16px rgba(120, 110, 95, 0.04) !important;
+}
+
 .theme-light .bg-base-800,
-[data-theme="light"] .bg-base-850,
 [data-theme="light"] .bg-base-800 {
-  border-color: #CBD5E1 !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  background-color: #ECE6DC !important;
+  border-color: #DDD8CD !important;
 }
 
 .theme-light .border-white\/10,
 .theme-light .border-white\/5,
 .theme-light .border-white\/20,
+.theme-light .border-\[\#00D9F5\]\/40,
+.theme-light .border-\[\#00D9F5\]\/30,
+.theme-light .border-\[\#00F5A0\]\/40,
+.theme-light .border-\[\#00F5A0\]\/30,
 [data-theme="light"] .border-white\/10,
 [data-theme="light"] .border-white\/5,
-[data-theme="light"] .border-white\/20 {
-  border-color: #CBD5E1 !important;
+[data-theme="light"] .border-white\/20,
+[data-theme="light"] .border-\[\#00D9F5\]\/40,
+[data-theme="light"] .border-\[\#00D9F5\]\/30,
+[data-theme="light"] .border-\[\#00F5A0\]\/40,
+[data-theme="light"] .border-\[\#00F5A0\]\/30 {
+  border-color: #DDD8CD !important;
 }
 
-/* Navbar navigation buttons */
+/* Section divider lines */
+.theme-light section.border-t,
+[data-theme="light"] section.border-t {
+  border-color: #DDD8CD !important;
+}
+
+/* Navbar in warm rice paper style */
+.theme-light header,
+[data-theme="light"] header {
+  background-color: rgba(250, 249, 245, 0.92) !important;
+  border-color: #DDD8CD !important;
+}
+
 .theme-light nav button,
 [data-theme="light"] nav button {
-  color: #1E293B !important;
-  font-weight: 600;
+  color: #334155 !important;
+  font-weight: 500;
 }
 
 .theme-light nav button:hover,
 [data-theme="light"] nav button:hover {
-  color: #047857 !important;
+  color: #15803D !important;
 }
 
-/* Light Mode Badges & Pills */
+/* Light Mode Badges & Pills (Warm Rice Paper style) */
 .theme-light [class*="bg-\[\#00F5A0\]\/15"],
 .theme-light [class*="bg-\[\#00F5A0\]\/10"],
 [data-theme="light"] [class*="bg-\[\#00F5A0\]\/15"],
 [data-theme="light"] [class*="bg-\[\#00F5A0\]\/10"] {
-  background-color: #ECFDF5 !important;
-  color: #047857 !important;
-  border-color: #A7F3D0 !important;
+  background-color: #DCFCE7 !important;
+  color: #166534 !important;
+  border-color: #BBF7D0 !important;
 }
 
 .theme-light [class*="bg-\[\#00D9F5\]\/15"],
 .theme-light [class*="bg-\[\#00D9F5\]\/10"],
 [data-theme="light"] [class*="bg-\[\#00D9F5\]\/15"],
 [data-theme="light"] [class*="bg-\[\#00D9F5\]\/10"] {
-  background-color: #F0F9FF !important;
+  background-color: #E0F2FE !important;
   color: #0369A1 !important;
   border-color: #BAE6FD !important;
 }
 
-/* Reduce glare in light mode: soft subtle shadows instead of fluorescent glare */
+/* Reduce glare in light mode: soft warm shadows instead of fluorescent glare */
 .theme-light .dark-glow-only,
 [data-theme="light"] .dark-glow-only {
   display: none !important;
@@ -430,24 +477,25 @@ body {
 
 .theme-light .btn-gradient-glow,
 [data-theme="light"] .btn-gradient-glow {
-  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25) !important;
+  box-shadow: 0 4px 14px rgba(21, 128, 61, 0.2) !important;
 }
 
 .theme-light .neon-border-glow,
 [data-theme="light"] .neon-border-glow {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 4px 16px rgba(120, 110, 95, 0.08) !important;
 }
 
 .theme-light .skill-tile:hover,
 [data-theme="light"] .skill-tile:hover {
-  box-shadow: 0 10px 20px -8px rgba(13, 148, 136, 0.2) !important;
+  box-shadow: 0 8px 18px -4px rgba(120, 110, 95, 0.15) !important;
+  border-color: #15803D !important;
 }
 
 /* Dark code terminal preserved for readability in light mode */
 .theme-light #code-box,
 [data-theme="light"] #code-box {
   background-color: #0B0F19 !important;
-  border-color: #CBD5E1 !important;
+  border-color: #DDD8CD !important;
 }
 
 .theme-light #code-box h1,
@@ -506,7 +554,7 @@ body {
 /* Footer remains dark in both themes for grounding */
 .theme-light footer,
 [data-theme="light"] footer {
-  background-color: #060709 !important;
+  background-color: #111614 !important;
   color: #94A3B8 !important;
 }
 
@@ -536,5 +584,5 @@ body {
 
 .theme-light footer a:hover,
 [data-theme="light"] footer a:hover {
-  color: #00F5A0 !important;
+  color: #22C55E !important;
 }
