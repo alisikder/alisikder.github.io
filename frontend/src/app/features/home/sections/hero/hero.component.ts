@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TerminalSnippetComponent } from '../../../../shared/components/terminal-snippet/terminal-snippet.component';
 import { PROFILE_DATA } from '../../../../core/data/profile.data';
@@ -22,7 +22,14 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
 
             <!-- Massive Headline with Emerald-to-Cyan Gradient -->
             <div class="space-y-2">
-              <p class="text-slate-400 font-mono text-sm tracking-wider uppercase">" Assalamu Alaikum "</p>
+              <p
+                class="text-slate-400 font-mono text-sm tracking-wider uppercase h-6 flex items-center select-none"
+                aria-live="polite"
+              >
+                <span>&quot; {{ currentGreeting() }}</span>
+                <span class="inline-block w-1.5 h-3.5 bg-[#00F5A0] shadow-[0_0_6px_#00F5A0] rounded-xs animate-pulse ml-1" aria-hidden="true"></span>
+                <span class="ml-1">&quot;</span>
+              </p>
               <h1
                 id="hero-title"
                 class="text-5xl sm:text-6xl lg:text-7xl font-display tracking-wide text-text-main leading-none"
@@ -138,6 +145,67 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
     </section>
   `
 })
-export class HeroSectionComponent {
+export class HeroSectionComponent implements OnInit, OnDestroy {
   readonly profile = PROFILE_DATA;
+
+  private readonly greetings: string[] = ['Assalamu Alaikum', 'Hello'];
+  readonly currentGreeting = signal<string>('Assalamu Alaikum');
+
+  private greetingIndex = 0;
+  private charIndex = 'Assalamu Alaikum'.length;
+  private isDeleting = true;
+  private timeoutId: ReturnType<typeof setTimeout> | null = null;
+
+  ngOnInit(): void {
+    if (typeof window !== 'undefined') {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+      }
+      // Hold the initial greeting for 2.4s before starting the first deletion
+      this.timeoutId = setTimeout(() => this.tick(), 2400);
+    }
+  }
+
+  ngOnDestroy(): void {
+    if (this.timeoutId) {
+      clearTimeout(this.timeoutId);
+      this.timeoutId = null;
+    }
+  }
+
+  private tick(): void {
+    const targetGreeting = this.greetings[this.greetingIndex];
+
+    if (!this.isDeleting) {
+      // Type next character
+      this.charIndex++;
+      this.currentGreeting.set(targetGreeting.slice(0, this.charIndex));
+
+      if (this.charIndex >= targetGreeting.length) {
+        // Fully typed: pause for 2.4s so reader can read
+        this.isDeleting = true;
+        this.timeoutId = setTimeout(() => this.tick(), 2400);
+        return;
+      }
+
+      // Typing speed: 85ms per character
+      this.timeoutId = setTimeout(() => this.tick(), 85);
+    } else {
+      // Delete next character
+      this.charIndex--;
+      this.currentGreeting.set(targetGreeting.slice(0, this.charIndex));
+
+      if (this.charIndex <= 0) {
+        // Fully erased: switch to next greeting in loop and pause briefly
+        this.charIndex = 0;
+        this.isDeleting = false;
+        this.greetingIndex = (this.greetingIndex + 1) % this.greetings.length;
+        this.timeoutId = setTimeout(() => this.tick(), 400);
+        return;
+      }
+
+      // Deleting speed: 45ms per character
+      this.timeoutId = setTimeout(() => this.tick(), 45);
+    }
+  }
 }
