@@ -31,22 +31,54 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
-              <div class="p-4 rounded-xl bg-base-850 border border-white/10">
-                <span class="text-slate-500 block mb-1">Academic Degree</span>
-                <p class="font-semibold text-text-main">BS (Honours)</p>
-                <p class="text-[#00F5A0] text-[11px]">University of Dhaka</p>
+              <div class="p-3.5 sm:p-4 rounded-xl bg-base-850 border border-white/10 flex items-center gap-3 hover:border-[#00F5A0]/40 transition-all">
+                <div class="shrink-0 w-10 h-10 flex items-center justify-center">
+                  <img
+                    src="du-logo.svg"
+                    alt="University of Dhaka Logo"
+                    class="max-w-full max-h-full object-contain"
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <span class="text-slate-500 block text-[10px] sm:text-[11px] leading-tight mb-1">Academic Degree</span>
+                  <p class="font-semibold text-text-main text-xs sm:text-sm leading-tight">BS (Honours)</p>
+                  <p class="text-[#00F5A0] text-[11px] leading-tight mt-0.5">University of Dhaka</p>
+                </div>
               </div>
 
-              <div class="p-4 rounded-xl bg-base-850 border border-white/10">
-                <span class="text-slate-500 block mb-1">Enterprise Training</span>
-                <p class="font-semibold text-text-main">Full-Stack Enterprise</p>
-                <p class="text-[#00D9F5] text-[11px]">IsDB-BISEW Scholar</p>
+              <div class="p-3.5 sm:p-4 rounded-xl bg-base-850 border border-white/10 flex items-center gap-3 hover:border-[#00D9F5]/40 transition-all">
+                <div class="shrink-0 w-10 h-10 flex items-center justify-center">
+                  <img
+                    src="isdb-logo.png"
+                    alt="IsDB-BISEW Logo"
+                    class="max-w-full max-h-full object-contain"
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="min-w-0 flex-1">
+                  <span class="text-slate-500 block text-[10px] sm:text-[11px] leading-tight mb-1">Enterprise Training</span>
+                  <p class="font-semibold text-text-main text-xs sm:text-sm leading-tight">Full-Stack Enterprise</p>
+                  <p class="text-[#00D9F5] text-[11px] leading-tight mt-0.5">IsDB-BISEW Scholar</p>
+                </div>
               </div>
 
-              <div class="p-4 rounded-xl bg-base-850 border border-white/10">
-                <span class="text-slate-500 block mb-1">Location &amp; Hub</span>
-                <p class="font-semibold text-text-main">Dhaka, Bangladesh</p>
-                <p class="text-slate-400 text-[11px]">UTC+6 Timezone</p>
+              <div class="p-3.5 sm:p-4 rounded-xl bg-base-850 border border-white/10 flex items-center gap-3 hover:border-white/20 transition-all">
+                <div class="shrink-0 w-10 h-10 flex items-center justify-center text-slate-400">
+                  <svg class="w-6 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div class="min-w-0 flex-1">
+                  <span class="text-slate-500 block text-[10px] sm:text-[11px] leading-tight mb-1">Location &amp; Hub</span>
+                  <p class="font-semibold text-text-main text-xs sm:text-sm leading-tight">Dhaka, Bangladesh</p>
+                  <p class="text-slate-400 text-[11px] leading-tight mt-0.5">UTC+6 Timezone</p>
+                </div>
               </div>
             </div>
           </div>
