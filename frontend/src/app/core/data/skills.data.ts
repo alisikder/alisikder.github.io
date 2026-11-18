@@ -8,14 +8,14 @@ export const SKILL_GROUPS: SkillGroup[] = [
     tier: 'primary',
     skills: [
       {
-        name: 'Java (JDK 17 / 21 / 25)',
+        name: 'Java (JDK 25)',
         category: 'Language',
         tier: 'primary',
         context: 'Object-oriented domain modeling, concurrency, streams, and modern language features.',
         featured: true
       },
       {
-        name: 'Spring Boot 4.x / 3.x',
+        name: 'Spring Boot 4.x',
         category: 'Framework',
         tier: 'primary',
         context: 'Layered RESTful architecture, dependency injection, and centralized exception handling.',
@@ -58,14 +58,14 @@ export const SKILL_GROUPS: SkillGroup[] = [
     tier: 'primary',
     skills: [
       {
-        name: 'Angular 22 / 21',
+        name: 'Angular 22',
         category: 'Framework',
         tier: 'primary',
         context: 'Standalone component architecture, reactive forms, lazy-loaded routing, and HTTP interceptors.',
         featured: true
       },
       {
-        name: 'TypeScript 6 / 5',
+        name: 'TypeScript 6',
         category: 'Language',
         tier: 'primary',
         context: 'Strict type checking, generic interfaces, union types, and type guards.',

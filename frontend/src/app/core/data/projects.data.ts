@@ -9,7 +9,7 @@ export const PROJECTS_DATA: PortfolioProject[] = [
     featured: true,
     status: 'implemented',
     role: 'Lead Architect & Full-Stack Developer',
-    timeline: '2025',
+    timeline: '2026',
     badgeLabel: 'Primary Flagship',
     coverGradient: 'from-emerald-950/40 to-slate-950/80',
     summary:
@@ -23,7 +23,9 @@ export const PROJECTS_DATA: PortfolioProject[] = [
       'Angular 22',
       'TypeScript 6',
       'PostgreSQL 16',
-      'Google Gemini 3.6 Flash',
+      'Android',
+      'Flutter',
+      'Google Gemini 3.8 Flash',
       'Leaflet GIS',
       'Spring Data JPA',
       'Tailwind CSS / Bootstrap'
@@ -132,7 +134,7 @@ export const PROJECTS_DATA: PortfolioProject[] = [
     featured: true,
     status: 'implemented',
     role: 'Android Developer',
-    timeline: '2025',
+    timeline: '2026',
     badgeLabel: 'Android Showcase',
     coverGradient: 'from-amber-950/40 to-slate-950/80',
     summary:
@@ -195,7 +197,7 @@ export const PROJECTS_DATA: PortfolioProject[] = [
     featured: true,
     status: 'prototype',
     role: 'Mobile Developer',
-    timeline: '2025',
+    timeline: '2026',
     badgeLabel: 'Flutter Showcase',
     coverGradient: 'from-blue-950/40 to-slate-950/80',
     summary:
@@ -249,7 +251,7 @@ export const PROJECTS_DATA: PortfolioProject[] = [
   },
   {
     slug: 'bangla-akinator',
-    title: 'বাংলা জ্বিন (Bangla Akinator)',
+    title: 'বাংলা অনুমানকারী (Bangla Akinator)',
     tagline: 'Probabilistic 20-Questions Guessing Engine Powered by Information Theory',
     category: 'Algorithmic Backend & Probabilistic Inference',
     featured: false,

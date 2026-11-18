@@ -31,7 +31,7 @@ import { CommonModule } from '@angular/common';
                 </div>
                 <h3 class="text-lg font-bold text-text-main mb-2">Enterprise Full-Stack Ecosystem (Horizon Platform)</h3>
                 <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
-                  Architected Horizon: a full-stack platform with Spring Boot 4 / Java 21 backend, Angular 22 web SPA, and dedicated Android (Retrofit) and Flutter mobile clients. Implemented dynamic HMAC token invalidation, Leaflet GIS tracking, and Gemini AI catalog grounding.
+                  Architected Horizon: a full-stack platform with Spring Boot 4.1 / Java 25 backend, Angular 22 web SPA, and dedicated Android (Retrofit) and Flutter mobile clients. Implemented dynamic HMAC token invalidation, Leaflet GIS tracking, and Gemini AI catalog grounding.
                 </p>
               </div>
             </div>
@@ -41,12 +41,12 @@ import { CommonModule } from '@angular/common';
               <div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#00D9F5] shadow-[0_0_12px_#00D9F5] border-2 border-base-900"></div>
               <div class="p-6 rounded-2xl bg-base-850 border border-white/10 hover:border-[#00D9F5]/40 transition-all">
                 <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                  <span class="text-xs font-mono text-cyan-400 font-bold tracking-wider">2024 – 2025 • PROFESSIONAL SCHOLARSHIP</span>
-                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-cyan-400/15 text-cyan-400 border border-cyan-400/30 font-semibold">Enterprise Training</span>
+                  <span class="text-xs font-mono text-cyan-400 font-bold tracking-wider">2025 – 2026 • PROFESSIONAL SCHOLARSHIP</span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-cyan-400/15 text-cyan-400 border border-cyan-400/30 font-semibold">Professional Enterprise Training</span>
                 </div>
                 <h3 class="text-lg font-bold text-text-main mb-2">Full-Stack Web Development Scholar — IsDB-BISEW IT Scholarship</h3>
                 <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
-                  Completed an intensive, full-time enterprise curriculum covering Java SE/EE, Spring Boot, Hibernate/JPA, Angular, TypeScript, relational database modeling, and software engineering methodologies.
+                  Completed an intensive, full-time enterprise curriculum covering Java SE/EE, Spring Boot, Hibernate/JPA, Angular, TypeScript, Android, and Flutter, along with relational database modeling, and software engineering methodologies.
                 </p>
               </div>
             </div>
@@ -69,13 +69,13 @@ import { CommonModule } from '@angular/common';
 
           <!-- Right Year / Persona Badge -->
           <div class="lg:col-span-4 flex flex-col items-center justify-center p-8 rounded-2xl bg-base-850 border border-white/10 text-center sticky top-28">
-            <span class="font-display text-7xl sm:text-8xl text-base-750 leading-none select-none">2025</span>
+            <span class="font-display text-7xl sm:text-8xl text-base-750 leading-none select-none">2026</span>
             <h4 class="font-display text-2xl text-gradient-em-cyan tracking-wide uppercase mt-[-10px]">MOHAMMAD ALI</h4>
             <p class="text-xs font-mono text-slate-400">Enterprise Engineer Ready</p>
             <div class="mt-6 pt-6 border-t border-white/10 w-full space-y-2 text-xs font-mono text-left">
               <div class="flex justify-between text-slate-400">
                 <span>Specialization:</span>
-                <span class="text-text-main font-semibold">Java / Angular</span>
+                <span class="text-text-main font-semibold">Java / Angular / Android / Flutter</span>
               </div>
               <div class="flex justify-between text-slate-400">
                 <span>Training:</span>

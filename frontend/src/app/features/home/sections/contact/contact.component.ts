@@ -15,7 +15,7 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
           </div>
           <h2 class="text-4xl sm:text-5xl font-display tracking-wide text-text-main">SEND A MESSAGE</h2>
           <div class="w-12 h-1 gradient-em-cyan rounded-full mt-2"></div>
-          <p class="text-slate-400 max-w-2xl text-sm pt-2 font-sans">Whether you have an open Junior Full-Stack / Java / Angular role, a technical inquiry, or want to explore my code.</p>
+          <p class="text-slate-400 max-w-2xl text-sm pt-2 font-sans">Whether you have an open Junior Full-Stack / Java / Angular / Android / Flutter role, a technical inquiry, or want to explore my code.</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">

@@ -2,7 +2,7 @@ import { TimelineItem } from '../models/profile.model';
 
 export const JOURNEY_TIMELINE: TimelineItem[] = [
   {
-    year: '2025 – Present',
+    year: '2026 – Present',
     period: 'Capstone & Multi-Client Architecture',
     title: 'Enterprise Full-Stack Ecosystem',
     institution: 'Horizon Travel Marketplace (Web · Android · Flutter)',
@@ -12,17 +12,17 @@ export const JOURNEY_TIMELINE: TimelineItem[] = [
     tags: ['Java 25', 'Spring Boot', 'Angular 22', 'Android', 'Flutter', 'PostgreSQL']
   },
   {
-    year: '2024 – 2025',
+    year: '2025 – 2026',
     period: 'Intensive Enterprise Training',
     title: 'Full-Stack Web Development Scholar',
     institution: 'IsDB-BISEW IT Scholarship Programme',
     badge: 'Professional Scholarship',
     description:
-      'Completed an intensive, full-time enterprise curriculum covering Java SE/EE, Spring Boot, Hibernate/JPA, Angular, TypeScript, relational database modeling, and software engineering methodologies.',
-    tags: ['Spring Framework', 'Angular', 'JPA/Hibernate', 'SQL', 'OOP', 'REST APIs']
+      'Completed an intensive, full-time enterprise curriculum covering Java SE/EE, Spring Boot, Hibernate/JPA, Angular, TypeScript, API design, Android development, and Flutter development, along with relational database modeling, and software engineering methodologies.',
+    tags: ['Spring Framework', 'Angular', 'TypeScript', 'Android', 'Flutter', 'JPA/Hibernate', 'SQL', 'OOP', 'REST APIs']
   },
   {
-    year: '2023 – 2024',
+    year: '2025 – 2026',
     period: 'Technical Foundation',
     title: 'Java Fundamentals & Relational Persistence',
     institution: 'Independent Projects & Core Engineering',

@@ -45,13 +45,13 @@ import { CommonModule } from '@angular/common';
           <span class="code-type">String</span> <span class="code-var">name</span><span class="code-bracket">,</span> <span class="code-string">"Mohammad Ali Sikder Ramim"</span><span class="code-bracket">,</span>
         </p>
         <p class="pl-3.5">
-          <span class="code-type">String</span> <span class="code-var">primaryFocus</span><span class="code-bracket">,</span> <span class="code-string">"Java 21, Spring Boot &amp; Angular"</span><span class="code-bracket">,</span>
+          <span class="code-type">String</span> <span class="code-var">primaryFocus</span><span class="code-bracket">,</span> <span class="code-string">"Java 25, Spring Boot &amp; Angular"</span><span class="code-bracket">,</span>
         </p>
         <p class="pl-3.5">
           <span class="code-type">List&lt;String&gt;</span> <span class="code-var">coreStack</span><span class="code-bracket">,</span> <span class="code-class">List.of</span><span class="code-bracket">(</span>
         </p>
         <p class="pl-7 code-list">
-          "Java 21", "Spring Boot", "Angular", "TypeScript", "PostgreSQL"
+          "Java 25", "Spring Boot", "Angular", "TypeScript", "Dart", "PostgreSQL"
         </p>
         <p class="pl-3.5"><span class="code-bracket">),</span></p>
         <p class="pl-3.5">
@@ -77,9 +77,9 @@ import { CommonModule } from '@angular/common';
       <!-- Footer Bar -->
       <div class="px-3.5 py-1.5 flex items-center justify-between text-[10px] font-mono border-t" id="code-box-footer">
         <span class="flex items-center gap-1.5 code-footer-verified">
-          <span class="w-1.5 h-1.5 rounded-full inline-block" id="code-box-status-dot"></span> OpenJDK 21 Verified
+          <span class="w-1.5 h-1.5 rounded-full inline-block" id="code-box-status-dot"></span> OpenJDK 25 Verified
         </span>
-        <span id="code-box-target">Target: Spring Boot 3.3.x</span>
+        <span id="code-box-target">Target: Spring Boot 4.1.x</span>
       </div>
     </div>
   `
@@ -89,8 +89,8 @@ export class TerminalSnippetComponent {
 
   private readonly snippet = `public record FullStackEngineer(
     String name, // "Mohammad Ali Sikder Ramim"
-    String primaryFocus, // "Java 21, Spring Boot & Angular"
-    List<String> coreStack, List.of("Java 21", "Spring Boot", "Angular", "TypeScript", "PostgreSQL"),
+    String primaryFocus, // "Java 25, Spring Boot & Angular"
+    List<String> coreStack, List.of("Java 25", "Spring Boot", "Angular", "TypeScript", "Dart", "PostgreSQL"),
     String flagshipProject, "Horizon (Travel Booking)",
     boolean availableForHire => true
 ) {

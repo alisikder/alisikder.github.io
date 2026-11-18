@@ -23,7 +23,7 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
           <div class="lg:col-span-6 space-y-6">
             <div class="bg-base-850 rounded-2xl p-6 sm:p-7 border border-white/10 space-y-4">
               <p class="text-slate-300 leading-relaxed text-sm sm:text-base font-sans">
-                I build type-safe, production-ready full-stack applications using modern Java, Spring Boot, Angular, TypeScript, and SQL. My architecture emphasizes decoupled layers, strict REST contracts, and defensible engineering choices.
+                I build type-safe, production-ready full-stack applications using modern Java, Spring Boot, Angular, TypeScript, Android, Flutter, and SQL. My architecture emphasizes decoupled layers, strict REST contracts, and defensible engineering choices.
               </p>
               <p class="text-slate-400 leading-relaxed text-sm font-sans">
                 Bridging an academic science foundation with rigorous enterprise software training gives me a disciplined approach to complex systems—from multi-tenant role isolation to real-time GIS telemetry and cross-platform mobile companions.
@@ -90,7 +90,7 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
                 <div class="w-8 h-8 rounded-lg bg-base-800 text-[#00D9F5] flex items-center justify-center font-mono text-xs font-bold mt-0.5 border border-[#00D9F5]/30">04</div>
                 <div>
                   <h3 class="text-sm font-semibold text-text-main">Accessible &amp; Responsive Design</h3>
-                  <p class="text-xs text-slate-400 mt-1 leading-relaxed font-sans">Semantic HTML5, high-contrast typography, and fluid layouts optimized across mobile and desktop.</p>
+                  <p class="text-xs text-slate-400 mt-1 leading-relaxed font-sans">Semantic HTML5, high-contrast typography, and fluid layouts optimized across desktop and mobile.</p>
                 </div>
               </div>
             </div>

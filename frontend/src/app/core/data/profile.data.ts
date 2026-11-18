@@ -4,7 +4,7 @@ export const PROFILE_DATA: ProfileData = {
   name: 'Mohammad Ali Sikder Ramim',
   shortName: 'Ali',
   title: 'Full-Stack Developer',
-  subtitle: 'Java · Spring Boot · Angular · TypeScript · SQL',
+  subtitle: 'Java · Spring Boot · Angular · Android · Flutter · SQL',
   location: 'Dhaka, Bangladesh',
   availability: 'Available for Developer Opportunities',
   isAvailable: true,

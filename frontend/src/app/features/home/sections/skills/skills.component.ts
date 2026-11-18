@@ -24,7 +24,7 @@ import { CommonModule } from '@angular/common';
             <div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-[#00F5A0] mb-2.5 group-hover:scale-110 transition-transform">
               <svg class="w-6 h-6" fill="currentColor" role="img" viewBox="0 0 24 24"><title>Java</title><path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639"/></svg>
             </div>
-            <span class="text-xs font-mono font-bold text-text-main group-hover:text-[#00F5A0] transition-colors">JAVA 21</span>
+            <span class="text-xs font-mono font-bold text-text-main group-hover:text-[#00F5A0] transition-colors">JAVA 25</span>
             <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider mt-0.5">Core Language</span>
           </div>
 
@@ -42,7 +42,7 @@ import { CommonModule } from '@angular/common';
             <div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-cyan-400 mb-2.5 group-hover:scale-110 transition-transform">
               <svg class="w-6 h-6" fill="currentColor" role="img" viewBox="0 0 24 24"><title>Angular</title><path d="M16.712 17.711H7.288l-1.204 2.916L12 24l5.916-3.373-1.204-2.916ZM14.692 0l7.832 16.855.814-12.856L14.692 0ZM9.308 0 .662 3.999l.814 12.856L9.308 0Zm-.405 13.93h6.198L12 6.396 8.903 13.93Z"/></svg>
             </div>
-            <span class="text-xs font-mono font-bold text-text-main group-hover:text-cyan-400 transition-colors">ANGULAR 18</span>
+            <span class="text-xs font-mono font-bold text-text-main group-hover:text-cyan-400 transition-colors">ANGULAR 22</span>
             <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider mt-0.5">Frontend SPA</span>
           </div>
 
@@ -105,7 +105,7 @@ import { CommonModule } from '@angular/common';
             <div class="w-11 h-11 rounded-lg bg-base-800 flex items-center justify-center text-amber-400 mb-2.5 group-hover:scale-110 transition-transform">
               <svg class="w-6 h-6" fill="currentColor" role="img" viewBox="0 0 24 24"><title>Google Gemini</title><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></svg>
             </div>
-            <span class="text-xs font-mono font-bold text-text-main group-hover:text-amber-400 transition-colors">GEMINI 1.5</span>
+            <span class="text-xs font-mono font-bold text-text-main group-hover:text-amber-400 transition-colors">GEMINI 3.8</span>
             <span class="text-[10px] font-mono text-slate-400 uppercase tracking-wider mt-0.5">AI Grounding</span>
           </div>
 
@@ -139,11 +139,11 @@ import { CommonModule } from '@angular/common';
             </div>
             <div class="space-y-3 text-xs font-sans">
               <div>
-                <span class="text-text-main font-semibold block text-sm">Java (JDK 17 / 21 / 23)</span>
+                <span class="text-text-main font-semibold block text-sm">Java (JDK 25)</span>
                 <span class="text-slate-400">Object-oriented domain modeling, concurrency, streams, and modern language features.</span>
               </div>
               <div>
-                <span class="text-text-main font-semibold block text-sm">Spring Boot 4.x / 3.x</span>
+                <span class="text-text-main font-semibold block text-sm">Spring Boot 4.x</span>
                 <span class="text-slate-400">Layered RESTful architecture, dependency injection, and centralized exception handling.</span>
               </div>
               <div>
@@ -166,11 +166,11 @@ import { CommonModule } from '@angular/common';
             </div>
             <div class="space-y-3 text-xs font-sans">
               <div>
-                <span class="text-text-main font-semibold block text-sm">Angular 18 / 17</span>
+                <span class="text-text-main font-semibold block text-sm">Angular 22</span>
                 <span class="text-slate-400">Standalone component architecture, reactive forms, and lazy-loaded routing.</span>
               </div>
               <div>
-                <span class="text-text-main font-semibold block text-sm">TypeScript 5 / 6</span>
+                <span class="text-text-main font-semibold block text-sm">TypeScript</span>
                 <span class="text-slate-400">Strict type-checking, generic interfaces, and type safety across services.</span>
               </div>
               <div>

@@ -14,7 +14,7 @@ import { PROFILE_DATA } from '../../../core/data/profile.data';
             Mohammad Ali Sikder Ramim
           </span>
           <span class="text-slate-500 text-xs font-mono block">
-            Java 21 • Spring Boot 3.3 • Angular 18 • PostgreSQL
+            Java 25 • Spring Boot 4.1 • Angular 22 • PostgreSQL • Android • Flutter
           </span>
         </div>
 
@@ -28,7 +28,7 @@ import { PROFILE_DATA } from '../../../core/data/profile.data';
         </nav>
 
         <p class="text-slate-500 font-mono text-center md:text-right">
-          Mohammad Ali Sikder © 2025<br>
+          Mohammad Ali Sikder © 2026<br>
           <span class="text-slate-600 text-[11px]">Learn, Build, and Strive.</span>
         </p>
       </div>

@@ -45,7 +45,7 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
 
             <!-- Bio / Description -->
             <p class="text-base text-slate-300 font-normal leading-relaxed max-w-xl font-sans">
-              Hi, I'm <strong class="text-text-main font-semibold">Ali</strong>. I build type-safe, production-ready full-stack applications with modern Spring Boot backends, reactive Angular web interfaces, and native mobile clients. Grounded in scientific rigor with intensive enterprise full-stack training.
+              Hi, I'm <strong class="text-text-main font-semibold">Ali</strong>. I build type-safe, enterprise-grade, production-ready full-stack applications with modern Spring Boot backends, reactive Angular web interfaces, and native mobile clients. Grounded in scientific rigor with intensive enterprise full-stack training.
             </p>
 
             <!-- High-Impact CTA Buttons with Emerald-Cyan Gradient -->
@@ -118,19 +118,25 @@ import { PROFILE_DATA } from '../../../../core/data/profile.data';
               </span>
               <div class="flex flex-wrap items-center gap-2">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-850 text-[#00F5A0] border border-[#00F5A0]/30 font-semibold">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#00F5A0]"></span> Java 21
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#00F5A0]"></span> Java 25
                 </span>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-850 text-[#00D9F5] border border-[#00D9F5]/30 font-semibold">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#00D9F5]"></span> Spring Boot 3.3
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#00D9F5]"></span> Spring Boot 4.1
                 </span>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-850 text-cyan-300 border border-cyan-400/30 font-semibold">
-                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Angular 18
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Angular 22
                 </span>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-850 text-purple-300 border border-purple-400/30 font-semibold">
                   <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> TypeScript 5
                 </span>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-850 text-blue-300 border border-blue-400/30 font-semibold">
                   <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> PostgreSQL 16
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-850 text-green-300 border border-green-400/30 font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-green-400"></span> Android
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-850 text-pink-300 border border-pink-400/30 font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span> Flutter
                 </span>
               </div>
             </div>
