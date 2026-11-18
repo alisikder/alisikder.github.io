@@ -15,13 +15,19 @@ import { PROFILE_DATA } from '../../../core/data/profile.data';
         <a
           routerLink="/"
           (click)="closeMobileMenu()"
-          class="flex items-center gap-3.5 group flex-shrink-0 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent rounded-xl p-1"
-          aria-label="Mohammad Ali Sikder Ramim homepage"
+          class="flex items-center gap-3 group flex-shrink-0 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent rounded-xl p-1"
+          aria-label="Ali portfolio homepage"
         >
           <div
-            class="w-10 h-10 rounded-xl bg-base-800 border border-[#00F5A0]/50 flex items-center justify-center font-display text-xl text-[#00F5A0] tracking-wider shadow-[0_0_15px_rgba(0,245,160,0.25)] group-hover:gradient-em-cyan group-hover:text-base-950 transition-all duration-300"
+            class="w-10 h-10 rounded-xl overflow-hidden border border-[#00F5A0]/40 shadow-[0_0_12px_rgba(0,245,160,0.25)] group-hover:border-[#00D9F5] group-hover:shadow-[0_0_16px_rgba(0,217,245,0.4)] transition-all duration-300 flex-shrink-0 bg-base-950"
           >
-            MASR
+            <img
+              src="logo.png"
+              alt="Ali Sikder Logo"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              width="40"
+              height="40"
+            />
           </div>
           <div>
             <span class="text-sm font-bold tracking-tight text-text-main group-hover:text-[#00D9F5] transition-colors block">
