@@ -26,7 +26,7 @@ import { CommonModule } from '@angular/common';
               <div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#00F5A0] shadow-[0_0_12px_#00F5A0] border-2 border-base-900"></div>
               <div class="p-6 rounded-2xl bg-base-850 border border-white/10 hover:border-[#00F5A0]/40 transition-all">
                 <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                  <span class="text-xs font-mono text-gradient-em-cyan font-bold tracking-wider">2025 – PRESENT • FLAGSHIP MILESTONE</span>
+                  <span class="text-xs font-mono text-gradient-em-cyan font-bold tracking-wider">2026 – PRESENT • FLAGSHIP MILESTONE</span>
                   <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#00F5A0]/15 text-[#00F5A0] border border-[#00F5A0]/30 font-semibold">Full-Stack Ecosystem</span>
                 </div>
                 <h3 class="text-lg font-bold text-text-main mb-2">Enterprise Full-Stack Ecosystem (Horizon Platform)</h3>

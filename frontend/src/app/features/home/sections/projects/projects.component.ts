@@ -68,7 +68,7 @@ import { ProjectService } from '../../../../core/services/project.service';
               </div>
               <div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-base-900 border border-white/5">
                 <span class="text-[#00F5A0] font-bold text-base mt-[-2px]">✓</span>
-                <span><strong>Context-grounded Gemini 1.5 Flash:</strong> integration enforcing server-side inventory verification against DB slots.</span>
+                <span><strong>Context-grounded Gemini 3.8 Flash:</strong> integration enforcing server-side inventory verification against DB slots.</span>
               </div>
               <div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-base-900 border border-white/5">
                 <span class="text-[#00D9F5] font-bold text-base mt-[-2px]">✓</span>
@@ -78,13 +78,13 @@ import { ProjectService } from '../../../../core/services/project.service';
 
             <!-- Tech Stack Badges -->
             <div class="flex flex-wrap gap-2 mb-8">
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-[#00F5A0] border border-[#00F5A0]/30 font-semibold">Java 21</span>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-[#00D9F5] border border-[#00D9F5]/30 font-semibold">Spring Boot 3.3</span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-[#00F5A0] border border-[#00F5A0]/30 font-semibold">Java 25</span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-[#00D9F5] border border-[#00D9F5]/30 font-semibold">Spring Boot 4.1</span>
               <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-purple-300 border border-purple-500/30">Spring Security 7</span>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-cyan-300 border border-cyan-500/30 font-semibold">Angular 18</span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-cyan-300 border border-cyan-500/30 font-semibold">Angular 22</span>
               <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-cyan-300 border border-cyan-500/30">TypeScript 5</span>
               <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-blue-300 border border-blue-500/30">PostgreSQL 16</span>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-amber-300 border border-amber-500/30">Google Gemini 1.5 Flash</span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-amber-300 border border-amber-500/30">Google Gemini 3.8 Flash</span>
               <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono rounded-lg bg-base-900 text-emerald-300 border border-emerald-500/30">Leaflet GIS</span>
             </div>
 
@@ -242,7 +242,7 @@ import { ProjectService } from '../../../../core/services/project.service';
                 </div>
                 <h4 class="text-xl font-bold text-text-main mb-1 group-hover:text-purple-400 transition-colors">
                   <a [routerLink]="['/projects', akinatorProject.slug]" class="focus:outline-hidden focus-visible:underline">
-                    বাংলা ধাঁধা (Bangla Akinator)
+                    বাংলা অনুমানকারী (Bangla Akinator)
                   </a>
                 </h4>
                 <p class="text-xs font-mono text-slate-400 mb-3">Probabilistic 20-Questions Guessing Game</p>
